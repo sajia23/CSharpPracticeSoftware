@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Data xmlns="">
+  <Liulan>
+    <!--上次浏览的题库 属性：Name（题库的名称） Path（题库实际存储位置）-->
+    <LastTiku Name="001-004" Path="resources\tiku\001-004.xml">
+      <!--上次浏览的题目 属性：Name（题目的名称）-->
+      <LastProblem>0</LastProblem>
+    </LastTiku>
+  </Liulan>
+</Data>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <Solvespace Name="cslearn">
+    <Problem Name="Problem 1 表格问题" Tiku="001-004" TotalSubmit="0" TotalHelp="0">
+      <Solvelution Name="第一个解决方案">      
+        <Classfile Name="Main.cs">
+          <Reference Name="引用">
+            <ref Name="System.Util">
+
+            </ref>
+          </Reference>
+        </Classfile>
+        <Classfile Name="cnm.cs">
+          <Reference Name="引用">
+            <ref Name="System.Util">
+
+            </ref>
+          </Reference>
+        </Classfile>
+      </Solvelution>
+    </Problem>
+  </Solvespace>
+</Data>

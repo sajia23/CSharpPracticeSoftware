@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFDI6TFAD43T7ZdxXrzxCsCYeHBpQAhRoJE75DliCFDbE7L5JlGPNMJczoQ==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 13 一个月的天数</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">请跟据一个年份和月份，求出该月的天数。注意：2月的天数取决于是否闰年。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据占一行，其中包含两个整数y和m（1501≤y≤2049，1≤m≤12），依次表示年份和月份；这两个整数之间以一个空格隔开。在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出一组对应的答案。每组答案占一行，其中包含一个整数，即该月的天数。在行首和行尾不要输出多余的空格；在所有数据前后不要输出多余的空行；两组数据之间也不要输出多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1901 1
+</TestInput>
+                    <TestOutput xml:space="preserve">31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1901 2
+</TestInput>
+                    <TestOutput xml:space="preserve">28
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1902 2
+</TestInput>
+                    <TestOutput xml:space="preserve">28
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1900 2
+</TestInput>
+                    <TestOutput xml:space="preserve">28
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1600 1
+</TestInput>
+                    <TestOutput xml:space="preserve">31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1600 2
+</TestInput>
+                    <TestOutput xml:space="preserve">29
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1604 4
+</TestInput>
+                    <TestOutput xml:space="preserve">30
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2004 5
+</TestInput>
+                    <TestOutput xml:space="preserve">31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1604 8
+</TestInput>
+                    <TestOutput xml:space="preserve">31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2004 9
+</TestInput>
+                    <TestOutput xml:space="preserve">30
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2004 10
+</TestInput>
+                    <TestOutput xml:space="preserve">31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">2049 1
+</TestInput>
+                    <TestOutput xml:space="preserve">31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">2049 2
+</TestInput>
+                    <TestOutput xml:space="preserve">28
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="018">#include&lt;iostream&gt;
+using namespace std;
+int main(){
+	int year,month;
+	while (cin&gt;&gt;year&gt;&gt;month){
+		switch (month){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12: cout&lt;&lt;"31\n"; break;
+			case 4:
+			case 6:
+			case 9:
+			case 11: cout&lt;&lt;"30\n"; break;
+			case 2: 
+ 				 if (( year % 4 == 0 &amp;&amp; year % 100 != 0) || (year % 400 == 0)) 
+				 	cout&lt;&lt;"29\n";
+				 else cout&lt;&lt;"28\n"; 
+				 break;
+		}
+	}
+	return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="false">
+            <Title>Problem 14 打印字母</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">请跟据一个大写英文字母(A到Z)，求出它的ASCII码值。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据占一行，其中只包含一个大写英文字母(A到Z)。在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出一组对应的答案。每组答案占一行，其中只包含一个整数，即该字母的ASCII码值。在行首和行尾不要输出多余的空格；在所有数据前后不要输出多余的空行；两组数据之间也不要输出多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">A
+</TestInput>
+                    <TestOutput xml:space="preserve">65
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">B
+</TestInput>
+                    <TestOutput xml:space="preserve">66
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">C
+</TestInput>
+                    <TestOutput xml:space="preserve">67
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">D
+</TestInput>
+                    <TestOutput xml:space="preserve">68
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">E
+</TestInput>
+                    <TestOutput xml:space="preserve">69
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">F
+</TestInput>
+                    <TestOutput xml:space="preserve">70
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">G
+</TestInput>
+                    <TestOutput xml:space="preserve">71
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">H
+</TestInput>
+                    <TestOutput xml:space="preserve">72
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">I
+</TestInput>
+                    <TestOutput xml:space="preserve">73
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">J
+</TestInput>
+                    <TestOutput xml:space="preserve">74
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">K
+</TestInput>
+                    <TestOutput xml:space="preserve">75
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">L
+</TestInput>
+                    <TestOutput xml:space="preserve">76
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">M
+</TestInput>
+                    <TestOutput xml:space="preserve">77
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">N
+</TestInput>
+                    <TestOutput xml:space="preserve">78
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">O
+</TestInput>
+                    <TestOutput xml:space="preserve">79
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">P
+</TestInput>
+                    <TestOutput xml:space="preserve">80
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">Q
+</TestInput>
+                    <TestOutput xml:space="preserve">81
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">R
+</TestInput>
+                    <TestOutput xml:space="preserve">82
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">S
+</TestInput>
+                    <TestOutput xml:space="preserve">83
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">T
+</TestInput>
+                    <TestOutput xml:space="preserve">84
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">U
+</TestInput>
+                    <TestOutput xml:space="preserve">85
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">V
+</TestInput>
+                    <TestOutput xml:space="preserve">86
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">W
+</TestInput>
+                    <TestOutput xml:space="preserve">87
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">X
+</TestInput>
+                    <TestOutput xml:space="preserve">88
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">Y
+</TestInput>
+                    <TestOutput xml:space="preserve">89
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">Z
+</TestInput>
+                    <TestOutput xml:space="preserve">90
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="019">#include&lt;iostream.h&gt;
+
+int main(){
+	int a;
+	while(cin&gt;&gt;a)
+	{	
+		cout&lt;&lt;a - 'A' + 65&lt;&lt;endl;
+	}
+	return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 15 阶乘</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">请跟据一个整数N（1≤N≤12），求出N的阶乘的值。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据占一行，其中只包含一个整数N（1≤N≤12）。在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出一组对应的答案。每组答案占一行，其中只包含一个整数，即N的阶乘的值。在行首和行尾不要输出多余的空格；在所有数据前后不要输出多余的空行；两组数据之间也不要输出多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">24
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">120
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">720
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">5040
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8
+</TestInput>
+                    <TestOutput xml:space="preserve">40320
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">362880
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">3628800
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">11
+</TestInput>
+                    <TestOutput xml:space="preserve">39916800
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">12
+</TestInput>
+                    <TestOutput xml:space="preserve">479001600
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="020">#include&lt;iostream&gt;
+using namespace std;
+int n[13];
+int main(){
+	int i, x, flag;
+	n[1] = 1;
+	for (i=2; i&lt;13; i++)
+		n[i] = n[i-1] * i;
+	while (cin&gt;&gt;x){
+		cout&lt;&lt;n[x]&lt;&lt;endl;
+	}
+	return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 16 折纸问题</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">已知有一张纸，其厚度为1厘米。现在给你一座山的高度N（单位：米）。问将纸对折多少次后，其厚度将超过这座山的高度？</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成，每行为一个正整数N，N小于等于珠穆朗玛峰的高度。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出文件（通常为启动该程序的文本终端）依次输出一组对应的答案：对折的次数，所有数据前后没有多余的空行，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">7
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">8
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">9
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">50
+</TestInput>
+                    <TestOutput xml:space="preserve">13
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">100
+</TestInput>
+                    <TestOutput xml:space="preserve">14
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1000
+</TestInput>
+                    <TestOutput xml:space="preserve">17
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5000
+</TestInput>
+                    <TestOutput xml:space="preserve">19
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">6000
+</TestInput>
+                    <TestOutput xml:space="preserve">20
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7000
+</TestInput>
+                    <TestOutput xml:space="preserve">20
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">8848
+</TestInput>
+                    <TestOutput xml:space="preserve">20
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="023">#include&lt;iostream&gt;
+using namespace std;
+int main(){
+	int i, n, r;
+	int flag;
+	while (cin&gt;&gt;n){
+		i=0;
+		r=1;
+		n *= 100;
+		while (r&lt;n){
+			r *= 2;
+			i++;
+		}
+		cout&lt;&lt;i&lt;&lt;endl;
+	}
+	return 0;
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

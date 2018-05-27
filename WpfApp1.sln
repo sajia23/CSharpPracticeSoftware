@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{ABE610F9-F5FB-498A-B6BE-19BB2A8100C6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupForCSharpTrain", "SetupForCSharpTrain\SetupForCSharpTrain.vdproj", "{4ED528EF-4F45-4B2F-B8F9-5263C95831CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABE610F9-F5FB-498A-B6BE-19BB2A8100C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE610F9-F5FB-498A-B6BE-19BB2A8100C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE610F9-F5FB-498A-B6BE-19BB2A8100C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE610F9-F5FB-498A-B6BE-19BB2A8100C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ED528EF-4F45-4B2F-B8F9-5263C95831CD}.Debug|Any CPU.ActiveCfg = Debug
+		{4ED528EF-4F45-4B2F-B8F9-5263C95831CD}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90C1354C-143C-4CD2-9C64-210201487B86}
+	EndGlobalSection
+EndGlobal

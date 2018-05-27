@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFH00LDQkJvCGGMQack2lgL96nZToAhR23cfbMKI0G1M3K8QN+5W6fZZv2g==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 1 三角形的个数</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明的爸爸常用玩游戏的方法来激发明明对几何学的兴趣。这天明明的爸爸和明明又玩起了有关三角形的游戏。&lt;BR&gt;&lt;BR&gt;
+
+明明爸爸对明明说：“我们能不能构造一个周长为15的三角形？”&lt;BR&gt;&lt;BR&gt;
+“太简单了，”明明说道：“三条边长都是5的三角形，它的周长不就是15吗？”&lt;BR&gt;&lt;BR&gt;
+“明明真聪明，算得真快。”明明爸爸接着说：“可是，我不想要三条边都相等的三角形哪！”&lt;BR&gt;&lt;BR&gt;
+明明大眼睛一转，说道：“那也好办啊，我只要对这个等边三角形的一条边减去一个数，再把这个数加到另一条边上就可以得到一个新的周长为15的三角形。例如，在第一条边上减去1，在第二条边上加上1，这样不就可以得到一个周长为15的新的三角形了吗？”&lt;br&gt;&lt;BR&gt;
+“哇，明明太聪明了”爸爸称赞道。“对，如果把第一条边上减去的1加到第三条边上去不就又可以得到周长为15的另外一个新三角形了吗？”爸爸模仿着明明的方法和语气。&lt;br&gt;&lt;BR&gt;
+“不对呀，爸爸。你构造的三角形和我构造的三角形是同样的三角形。爸爸你看，我的三角形三条边分别长为4、6、5，而你的三角形三条边分别长为4、5、6，将三条边按其边长排序后都得到4、5、6，所以它们是同一个三角形，不是两个不同的三角形。”&lt;br&gt;&lt;BR&gt;
+“啊，还是明明聪明。那还有没有其他周长为15的三角形吗？”&lt;br&gt;&lt;BR&gt;
+“当然有啦。三条边边长分别为4、4、7的三角形，它的周长就是15，不过你可能不喜欢它，因为它有两条边的边长相等。”
+&lt;p&gt;
+明明和爸爸玩了一下午这样的三角形游戏，明明一共又构造了另外两个他认为他爸爸喜欢的三角形，即边长分别为2、6、7的三角形和边长分别为3、5、7的三角形。晚上，明明躺在床上还在思考：如果周长不是15，而是90，那么爸爸喜欢的三角形有多少个呢？&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：跟据一个正整数n（3 ≤ n ≤ 100），要求统计出同时满足下列条件的三角形的个数：
+&lt;ol&gt;
+    &lt;li&gt;边长都是整数。&lt;/li&gt;
+    &lt;li&gt;周长为n。&lt;/li&gt;
+    &lt;li&gt;边长两两不相等。&lt;/li&gt;
+&lt;/ol&gt;
+之所以有上述第一个条件，那是因为明明只知道正整数，没有学过分数和实数，因此他构造出的三角形的边长均为正整数。
+&lt;p&gt;
+请你写一个程序来帮助明明计算出他认为他爸爸喜欢的三角形的个数。</Description>
+                <InputSpec xml:space="preserve">你写的程序需要从标准输入设备（通常为键盘）中读入多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（3 ≤ n ≤ 100），代表需要被统计的三角形的周长，n的前后都没有任何空格。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将每组运算结果依次写入到标准输出设备（通常为启动该程序的文本终端，例如Windows中的命令行终端）中。每组运算结果为一个大于等于0的整数构成，即满足条件的三角形的个数。例如：测试数据n为15时，运算结果应为3。输出时，每组运算结果占一行，其行首和行尾都没有任何空格或其他字符，每组运算结果与其后一组运算结果之间没有任何空行或其他字符，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行或其他字符。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">15
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">30
+</TestInput>
+                    <TestOutput xml:space="preserve">12
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">40
+</TestInput>
+                    <TestOutput xml:space="preserve">24
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">50
+</TestInput>
+                    <TestOutput xml:space="preserve">40
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">60
+</TestInput>
+                    <TestOutput xml:space="preserve">61
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">70
+</TestInput>
+                    <TestOutput xml:space="preserve">85
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">80
+</TestInput>
+                    <TestOutput xml:space="preserve">114
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">100
+</TestInput>
+                    <TestOutput xml:space="preserve">184
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="001">#include &lt;iostream&gt; //
+using namespace std;//
+
+bool triangle( int a,int b,int c )  //
+{
+	if ( a==b || b==c )  //
+		return false;   //
+	else
+		return true;  //
+}
+
+bool check( int a,int b,int c ) //
+{
+	if ( a+b&gt;c &amp;&amp; a+c&gt;b &amp;&amp; b+c&gt;a )  //
+		return true; //
+	else   
+		return false; //
+}
+
+void solve( int n )  //
+{
+	int a,b,c;   //
+	int sum = 0;  //
+	for ( a=1;a&lt;n;a++ )  //
+		for ( b=a;b&lt;n;b++ )  //
+			for ( c=b;c&lt;n;c++ )  //
+				if ( a+b+c==n &amp;&amp; check( a,b,c ) &amp;&amp; triangle( a,b,c ) )  //
+				{
+					sum++;  //
+				}
+	cout&lt;&lt;sum&lt;&lt;endl;  //
+}
+
+int main()  //
+{
+	int n;  //
+	while ( cin&gt;&gt;n )   //
+	{
+		solve( n );  //
+	}
+return 0;  //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 2 纯粹素数</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明的爸爸是一位数学家，明明受他爸爸的影响从小就喜欢数学，经常向他爸爸请教数学问题。一天，明明问爸爸什么是素数，爸爸回答说：“首先，素数都是大于1的自然数；其次，素数是只能被1和其本身整除的数。例如‘3’这个数，它只能被1和3这两个整数整除，因此‘3’就是素数；但是‘4’就不是素数，因为4除了能被1和4整除外，也能被2整除，因此‘4’就不是一个素数。”
+&lt;p&gt;
+聪明的明明很快就理解了他爸爸的意思，于是又接着问他爸爸：“那么纯粹素数又是什么呢？”明明的爸爸接着回答说：“一个素数，去掉最高位，剩下的数仍为素数，再去掉剩下的数的最高位，余下的数还是素数，这样下去一直到最后剩下的个位数也还是素数，我们把这样的数称为纯粹素数。例如‘1013’这个数，它只能被1和1013整除，因此‘1013’是一个素数，我们去掉它的最高位，剩下的数是13（其实剩下的应该是013，但是前置0对一个整数来说没有意义，因此0被舍去，就剩下13），13只能被1和13整除，因此13也是个素数，我们再接着去掉它的最高位，剩下的个位数是3，3当然也是素数，因此‘1013’就是纯粹素数。更有趣的是，1013是第一个大于1000的纯粹素数，因为：
+&lt;ul&gt;
+    &lt;li&gt;1000能被1、2、……、1000整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1001能被1、7、……、1001整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1002能被1、2、……、1000整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1003能被1、17、……、1003整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1004能被1、2、……、1004整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1005能被1、3、……、1005整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1006能被1、2、……、1006整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1007能被1、19、……、1007整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1008能被1、2、……、1008整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1009是一个素数，但是9能被1、3、9整除，不是素数；&lt;/li&gt;
+    &lt;li&gt;1010能被1、2、……、1010整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1011能被1、3、……、1011整除，其本身不是素数；&lt;/li&gt;
+    &lt;li&gt;1012能被1、2、……、1012整除，其本身不是素数；&lt;/li&gt;
+&lt;/ul&gt;
+所以从1000到1012，每个数都不是纯粹素数。”
+&lt;p&gt;
+明明对他爸爸的回答很满意，于是自己动手从1000开始寻找纯粹素数，不一会儿他就找到了20个纯粹素数，调皮的明明开始反过来考爸爸了，问他爸爸能否告诉他第2个大于1000的纯粹素数是哪个？第3个大于1000的纯粹素数是哪个？……明明的爸爸被这些突如其来的问题给难住了，他无法立刻回答出来，于是请求你帮助他回答明明的这些问题。
+&lt;p&gt;
+明明的问题可以归结为：跟据一个正整数n，求出从1,000开始从小到大的第n个纯粹素数。</Description>
+                <InputSpec xml:space="preserve">你写的程序需要从标准输入设备（通常为键盘）中读入多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（1 ≤ n ≤ 20）。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序需要计算出一组相应的运算结果，并将每组运算结果依次写入到标准输出设备（通常为启动该程序的文本终端，例如Windows中的命令行终端）中。每组运算结果为一个整数，即从1,000开始从小到大的第n个纯粹素数。。每组运算结果单独形成一行，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">1013
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">1097
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">1103
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">1223
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">1283
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">16
+</TestInput>
+                    <TestOutput xml:space="preserve">2017
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">17
+</TestInput>
+                    <TestOutput xml:space="preserve">2053
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">18
+</TestInput>
+                    <TestOutput xml:space="preserve">2083
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">19
+</TestInput>
+                    <TestOutput xml:space="preserve">2113
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">20
+</TestInput>
+                    <TestOutput xml:space="preserve">2137
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="002">#include &lt;iostream&gt;  //
+#include &lt;cmath&gt;  //
+using namespace std;  //
+
+bool prime[3010] = { false };  //
+
+bool isPrime( int n )  //
+{
+	for ( int i=2;i&lt;=(int)sqrt(n*1.0);i++ )  //
+		if ( n % i == 0 )  //
+			return false;  //
+	return true;  //
+}
+
+void initPrime()  //
+{
+	for ( int i=2;i&lt;=3000;i++ )    //
+		if ( isPrime( i ) )   //
+			prime[i] = true;  //
+}
+
+void toArray( int n,int *p )  //
+{
+	int cnt = 0;  //
+	while ( n ) {  //
+		p[cnt++] = n%10;  //
+		n /= 10;  //
+	}
+}
+
+int yes( int n )  //
+{
+	int array[5];  //
+	toArray( n,array );  //
+	int a = array[0];  //
+	int b = array[1]*10;  //
+	int c = array[2]*100;  //
+	int d = array[3]*1000;  //
+	if ( prime[ a ] == false ) return 0;  //
+	else if ( prime[ a+b ] == false ) return 0;  //
+	else if ( prime[ a+b+c ] == false ) return 0;  //
+	else if ( prime[ a+b+c+d ] == false ) return 0;  //
+	else return 1;  //
+}
+
+int main()  //
+{
+	initPrime();  //
+	int p[30];
+	int i,j;  //
+	int n;
+        j =0;
+	for ( i=1000;i&lt;=3000;i++ )  //
+	{
+		if ( yes(i) ) p[j++] = i;  //
+	}
+	while(cin&gt;&gt;n)
+	{
+		cout&lt;&lt;p[n-1]&lt;&lt;endl;
+	}
+	return 0;  //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 3 纯粹合数</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明的爸爸是一位数学家，明明受他爸爸的影响从小就喜欢数学，经常向他爸爸学习或请教数学问题。一天，明明问他爸爸什么是合数，明明的爸爸回答说：“首先，合数都是大于1的整数，其次合数是除了1和其本身外，还能被至少一个其他自然数整除的数，例如‘4’这个数，它除了能被1和4整除外，还能被2整除，因此‘4’就是合数；但是‘3’就不是合数，因为3只能被1和3这两个数整除，因此‘3’不是合数。”
+&lt;p&gt;
+聪明的明明很快就理解了他爸爸的意思，于是又接着问他爸爸：“那什么又是纯粹合数呢？”明明的爸爸接着回答说：“一个合数，去掉最高位，剩下的数是0或仍是合数；再去掉剩下的数的最高位，剩下的数还是0或合数；这样反复，一直到最后剩下的一位数仍为0或合数；我们把这样的数称为纯粹合数。例如‘100’这个数，它能被1、2、4、5、10、20、50、100整除，因此100是个合数，我们去掉它的最高位，剩下的数是0（其实剩下的应该是00，但是前置0对一个整数来说没有意义，因此前置0被舍去，就剩下个位数上的0），因此‘100’是一个纯粹合数。有趣的是，100是最小的一个三位纯粹合数。再例如‘104’这个数，104能被1、2、8、13、26、52、104整除，所以104是个合数；我们去掉它的最高位后剩下4，4能被1、2、4整除，所以4也是合数，所以‘104’是一个纯粹合数。但是‘101’就不是纯粹合数，因为‘101’只能被1和101这两个数整除。”
+&lt;p&gt;
+明明对他爸爸的回答很满意，于是自己动手从100开始寻找纯粹合数，他一共找到了100个纯粹合数，调皮的明明开始反过来考爸爸了，问他爸爸能否告诉他第2个大于等于100的纯粹合数是哪个？第3个大于等于100的纯粹合数又是哪个？……明明的爸爸被这个突如其来的问题给难住了，他无法立刻回答出来，于是请求你的帮助，帮助他回答明明的这个问题。
+&lt;p&gt;
+明明的问题可以归结为：跟据一个正整数n，求出从100开始从小到大的第n个纯粹合数。</Description>
+                <InputSpec xml:space="preserve">你写的程序需要从标准输入设备（通常为键盘）中读入多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（1 ≤ n ≤ 100）。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序需要计算出一组相应的运算结果，并将每组运算结果依次写入到标准输出设备（通常为启动该程序的文本终端，例如Windows中的命令行终端）中。每组运算结果为一个整数，即从100开始从小到大的第n个纯粹合数。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">100
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">104
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">124
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">50
+</TestInput>
+                    <TestOutput xml:space="preserve">218
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">99
+</TestInput>
+                    <TestOutput xml:space="preserve">334
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">100
+</TestInput>
+                    <TestOutput xml:space="preserve">336
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">96
+</TestInput>
+                    <TestOutput xml:space="preserve">326
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">97
+</TestInput>
+                    <TestOutput xml:space="preserve">328
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">98
+</TestInput>
+                    <TestOutput xml:space="preserve">330
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="003">#include &lt;iostream&gt; 
+#include &lt;cmath&gt; //sqrt
+
+using namespace std; 
+
+const int INIT_SIZE = 4000;
+
+bool g_prime[INIT_SIZE];
+int g_answer[100];
+
+bool isPrime(int n) {
+    for (int i = 2; i &lt;= (int)sqrt(n); i++)
+        if (0 == n % i)
+            return false;
+    return true;
+}
+
+void initPrime() {
+    g_prime[0] = g_prime[1] = false;
+    for (int i = 2; i &lt; INIT_SIZE; i++)
+        g_prime[i] = isPrime(i);
+}
+
+bool ok(int n) {
+    //The number which is powers of 10 and has the same highest digit with n.
+    int high = 1;
+    while (high &lt;= n)  high *= 10;
+    high /= 10;
+
+    while (n &gt; 0) {
+        if ( 1 == n || g_prime[n] )  return false;
+        n -= high * (n / high); //cut the highest digit of n;
+        high /= 10;
+    }
+
+    return true;
+}
+
+void initAnswer() {
+    int n = 0;
+    for (int i = 100; n &lt; 100; i++)
+        if ( ok(i) )
+            g_answer[n++] = i;
+}
+
+int main() {
+    initPrime();
+    initAnswer();
+    int i;
+    cin &gt;&gt; i;
+    while (cin) {
+        cout &lt;&lt; g_answer[i - 1] &lt;&lt; endl;
+        cin &gt;&gt; i;
+    }
+    return 0; 
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 4 求数列项</Title>
+            <Author>朱凯</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">数列是数学世界中一种非常有趣的数字排列规则，它使一串数字相互之间产生了某种联系，变幻无穷。很多数学家对数列产生了浓厚的兴趣，花了很多时间对其进行研究，明明就是其中的一位。一天，他又专注于一种新的数列排列规则，该排列规则满足以下条件：
+&lt;ol&gt;
+    &lt;li&gt;该数列的第一个数为1。&lt;/li&gt;
+    &lt;li&gt;该数列的第二个数为5。&lt;/li&gt;
+    &lt;li&gt;该数列的第i （其中i &amp;gt; 2）个数为第i - 1个数的数值加上(i - 3) × 3 + 7。&lt;/li&gt;
+&lt;/ol&gt;
+明明很快就推算出了这个数列的前三项数字：
+&lt;ol&gt;
+    &lt;li&gt;第一项为1。&lt;/li&gt;
+    &lt;li&gt;第二项为5。&lt;/li&gt;
+    &lt;li&gt;第三项为12。（第三项的数字为第二项的数字加上(3 - 3) × 3 + 7，即第三项的数为：5 + (3 - 3) × 3 + 7 = 12）&lt;/li&gt;
+&lt;/ol&gt;
+但是当明明还想继续把数列往下推算的时候，他发现计算量越来越大，计算难度越来越高，计算速度也越来越慢。于是，明明就求助于你这位程序设计专家，帮他写一个程序，计算出数列的前50项，然后当明明需要知道数列中的哪一项的数字时，你就把那一项的数字告诉明明。
+&lt;p&gt;
+明明的问题可以归结为：跟据一个正整数n，要求你输出题目中所描述的数列的第n项数值。</Description>
+                <InputSpec xml:space="preserve">你写的程序需要从标准输入设备（通常为键盘）中读入多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（1 ≤ n ≤ 50）。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序需要计算出一组相应的运算结果，并将每组运算结果依次写入到标准输出设备（通常为启动该程序的文本终端，例如Windows中的命令行终端）中。每组运算结果为一个整数，即题目中所描述的数列的第n项数值。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">5
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">12
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">145
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">20
+</TestInput>
+                    <TestOutput xml:space="preserve">590
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">30
+</TestInput>
+                    <TestOutput xml:space="preserve">1335
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">50
+</TestInput>
+                    <TestOutput xml:space="preserve">3725
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="004">#include &lt;iostream&gt;     //
+using namespace std;    //
+
+
+int main()             //
+{
+	int cnt = 1;        //
+	int index,delta = 4;  //
+	int p[51],j,n;
+	index = 1;  //
+	
+	j=0;
+	p[j++] = index;
+	while ( cnt &lt; 50 )      //
+	{
+		index += delta;    //
+		delta += 3;  //
+		cnt++;           //
+		
+		p[j++] = index;
+	}
+	
+	while(cin&gt;&gt;n)
+	{
+        cout&lt;&lt;p[n-1]&lt;&lt;endl;
+    }
+return 0;  //
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

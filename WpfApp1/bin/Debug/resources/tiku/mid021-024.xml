@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFBo7ZrMH7UjUjgpNBsmG3ejPWB0TAhQILSs48Mrv+6JmIuaeeVhnYGY0zA==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 21 公共汽车</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明平时坐公交车上学。时间长了，他发现了一个有趣的现象：每次从公交车的起点站上车，然后终点站下车，在途中的每一站，上车的乘客中都恰好在以后的每一站都有一位要下车。也就是说，如果公交路线共有5个车站，在第2站上车的乘客在第3、4、5站分别都有一位乘客下车。于是明明就在想一个问题，如果公交车共有S个车站，除了最后一站不上乘客，其余各站都可以上乘客，那么要让每一位上车的乘客都有位置坐，这辆公共汽车最少要有多少个座位呢？又总共会有多少位乘客上车呢？这似乎是一个简单的问题，但是同样又很复杂，因为当S变得越来越大的时候，计算量就直线上升了，无法简单地用手算完成，于是明明就求助于你，帮他写一个程序，用来计算出这个问题。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：一个共有S个车站的公交车，从起点驶向终点，除终点站外，其它每一站上车的乘客中都恰好在以后的每一站都有一位要下车，为了使每一位乘客都有座位，问这辆公共汽车最少要有多少个座位？总共会有多少位乘客上车？
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅有一个整数S（1 ≤ S ≤ 30），表示公交车的车站数。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果由两个整数构成，分别表示公共汽车最少要有多少个座位和总共会有多少位乘客上车，两个整数之间用一个空格隔开。每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">6 10
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">4 6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">0 0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">30
+</TestInput>
+                    <TestOutput xml:space="preserve">225 435
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">1 1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">2 3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">25 45
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">15
+</TestInput>
+                    <TestOutput xml:space="preserve">56 105
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">20
+</TestInput>
+                    <TestOutput xml:space="preserve">100 190
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">25
+</TestInput>
+                    <TestOutput xml:space="preserve">156 300
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="071">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int stop;
+    while (cin &gt;&gt; stop) {
+        int onBus = 0;
+        int ticket = 0;
+        int seat = 0;
+        for (int i = 1; i &lt;= stop; i++) {
+            int getOn = stop - i;
+            onBus -= i - 1;
+            onBus += getOn;
+            if (seat &lt; onBus) {
+                seat = onBus;
+            }
+            ticket += getOn;
+        }
+        cout &lt;&lt; seat &lt;&lt; ' ' &lt;&lt; ticket &lt;&lt; endl;
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 22 棋盘</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明的爸爸很注重开发明明的智力，经常通过一些小游戏来锻炼明明的思维，希望他变得越来越聪明。有一次，明明和他爸爸玩起了棋盘游戏。明明的爸爸随意地在一个n×n的棋盘i行j列上放上一颗棋子，然后要求明明能够根据这颗棋子的位置，把其他的棋子摆在和这颗棋子相同的行上、列上和斜线上（注意，斜线有2条，左上到右下和左下到右上）。例如：n=4，i=2，j=3，即有一个4×4的棋盘，明明的爸爸把一颗棋子摆在了棋盘的第二行第三列，用（2，3）表示，然后明明就需要根据这个棋子的位置摆放其他棋子，最终的摆放结果如下：&lt;BR&gt;
+(2,1)(2,2)(2,3)(2,4) {同一行格子的位置} &lt;BR&gt;
+(1,3)(2,3)(3,3)(4,3) {同一列格子的位置} &lt;BR&gt;
+(1,2)(2,3)(3,4) {左上到右下对角线上的格子位置} &lt;BR&gt;
+(4,1)(3,2)(2,3)(1,4) {左下到右上对角线上的格子位置} &lt;BR&gt;
+（注意，以上的摆放结果也包括明明的爸爸所摆放的那颗棋子。）&lt;BR&gt;
+&lt;BR&gt;
+明明显然对这个游戏很感兴趣，高兴地玩了起来，每次都很快地完成了棋子的摆放，但是这时轮到明明的爸爸犯难了，他每次都要花很多时间来检查明明摆放棋子的位置是否准确，于是他想请你帮个忙，帮他写一个程序，来完成检验棋子摆放位置是否正确。&lt;BR&gt;
+&lt;BR&gt;
+明明爸爸的问题可以归结为：告诉你一个棋盘的大小n和棋子的摆放位置（i，j），然后输出与这个棋子同行、同列、同斜线上的其他棋子的位置，注意，输出中也包括（i，j）这颗棋子本身。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行包含3个整数n、i、j（1 ≤ n ≤ 12；1 ≤ i、j ≤ n），其中n表示棋盘的大小，i、j表示明明爸爸所摆放棋子的位置，整数之间用一个空格隔开。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果由四行构成，本别表示与输入中（i，j）这个棋子在同一行的棋子、在同一列的棋子、在同一斜线的棋子（左上到右下）和在同一斜线的棋子（左下到右上），每个棋子的位置输出格式如下：（i，j），用一对括号括起来，i表示行，j表示列，i和j之间用一个逗号隔开，位置与位置之间不包含空格，连续输出即可，具体形式请参考样例输出。每组运算结果与其后一组运算结果之间有一个空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4 2 3
+</TestInput>
+                    <TestOutput xml:space="preserve">(2,1)(2,2)(2,3)(2,4)
+(1,3)(2,3)(3,3)(4,3)
+(1,2)(2,3)(3,4)
+(4,1)(3,2)(2,3)(1,4)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3 1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">(1,1)(1,2)(1,3)
+(1,1)(2,1)(3,1)
+(1,1)(2,2)(3,3)
+(1,1)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1 1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">(1,1)
+(1,1)
+(1,1)
+(1,1)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">12 12 12
+</TestInput>
+                    <TestOutput xml:space="preserve">(12,1)(12,2)(12,3)(12,4)(12,5)(12,6)(12,7)(12,8)(12,9)(12,10)(12,11)(12,12)
+(1,12)(2,12)(3,12)(4,12)(5,12)(6,12)(7,12)(8,12)(9,12)(10,12)(11,12)(12,12)
+(1,1)(2,2)(3,3)(4,4)(5,5)(6,6)(7,7)(8,8)(9,9)(10,10)(11,11)(12,12)
+(12,12)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">5 2 2
+</TestInput>
+                    <TestOutput xml:space="preserve">(2,1)(2,2)(2,3)(2,4)(2,5)
+(1,2)(2,2)(3,2)(4,2)(5,2)
+(1,1)(2,2)(3,3)(4,4)(5,5)
+(3,1)(2,2)(1,3)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">5 2 4
+</TestInput>
+                    <TestOutput xml:space="preserve">(2,1)(2,2)(2,3)(2,4)(2,5)
+(1,4)(2,4)(3,4)(4,4)(5,4)
+(1,3)(2,4)(3,5)
+(5,1)(4,2)(3,3)(2,4)(1,5)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">5 4 2
+</TestInput>
+                    <TestOutput xml:space="preserve">(4,1)(4,2)(4,3)(4,4)(4,5)
+(1,2)(2,2)(3,2)(4,2)(5,2)
+(3,1)(4,2)(5,3)
+(5,1)(4,2)(3,3)(2,4)(1,5)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">5 4 4
+</TestInput>
+                    <TestOutput xml:space="preserve">(4,1)(4,2)(4,3)(4,4)(4,5)
+(1,4)(2,4)(3,4)(4,4)(5,4)
+(1,1)(2,2)(3,3)(4,4)(5,5)
+(5,3)(4,4)(3,5)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10 3 7
+</TestInput>
+                    <TestOutput xml:space="preserve">(3,1)(3,2)(3,3)(3,4)(3,5)(3,6)(3,7)(3,8)(3,9)(3,10)
+(1,7)(2,7)(3,7)(4,7)(5,7)(6,7)(7,7)(8,7)(9,7)(10,7)
+(1,5)(2,6)(3,7)(4,8)(5,9)(6,10)
+(9,1)(8,2)(7,3)(6,4)(5,5)(4,6)(3,7)(2,8)(1,9)
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">9 6 3
+</TestInput>
+                    <TestOutput xml:space="preserve">(6,1)(6,2)(6,3)(6,4)(6,5)(6,6)(6,7)(6,8)(6,9)
+(1,3)(2,3)(3,3)(4,3)(5,3)(6,3)(7,3)(8,3)(9,3)
+(4,1)(5,2)(6,3)(7,4)(8,5)(9,6)
+(8,1)(7,2)(6,3)(5,4)(4,5)(3,6)(2,7)(1,8)
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="072">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int size;
+    int row, col;
+    int cnt = 0;
+    while (cin &gt;&gt; size &gt;&gt; row &gt;&gt; col) {
+        if (cnt &gt; 0) {
+            cout &lt;&lt; endl;
+        }
+        cnt++;
+        for (int i = 1; i &lt;= size; i++) {
+            cout &lt;&lt; '(' &lt;&lt; row &lt;&lt; ',' &lt;&lt; i &lt;&lt; ')';
+        }
+        cout &lt;&lt; endl;
+        for (int i = 1; i &lt;= size; i++) {
+            cout &lt;&lt; '(' &lt;&lt; i &lt;&lt; ',' &lt;&lt; col &lt;&lt; ')';
+        }
+        cout &lt;&lt; endl;
+        for (int i = col - row + 1; i &lt;=size; i++) {
+            int j = i - col + row;
+            if (i &gt; 0 &amp;&amp; j &lt;= size) {
+                cout &lt;&lt; '(' &lt;&lt; j &lt;&lt; ',' &lt;&lt; i &lt;&lt; ')';
+            }
+        }
+        cout &lt;&lt; endl;
+        for (int i = row + col - 1; i &gt; 0; i--) {
+            int j = col - i + row ;
+            if (i &lt;= size &amp;&amp; j &lt;= size) {
+                cout &lt;&lt; '(' &lt;&lt; i &lt;&lt; ',' &lt;&lt; j &lt;&lt; ')';
+            }
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 23 构造序列</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">序列是在数学世界中一种非常有趣的数字现象，它通过某一规则来产生数字，使数字变得有趣、变幻无穷。很多数学家对序列这种事物产生了浓厚的兴趣，花了很多时间对其进行研究，明明就是其中的一位。一天，他又在研究一种新的序列产生规则，该序列的规则如下：&lt;BR&gt;&lt;BR&gt;
+
+1）	第一轮，写出两个1，即11；&lt;BR&gt;
+2）	第二轮，在它们中间插入2，成为121；&lt;BR&gt;
+3）	第三轮，在上面数中每两个相邻的和为3的数之间插入3，成为13231；&lt;BR&gt;
+4）	以此类推下去……&lt;BR&gt;
+&lt;BR&gt;
+明明根据这个规则开始构造序列。开始还觉得容易，但是越到后面，明明发现构造序列的计算量越来越大，计算难度也越来越高，计算速度也越来越慢。于是，明明就求助于你这位程序设计专家，能否帮他写一个程序，构造出序列的前9项，然后当明明需要知道序列中的哪一项的时，你就把那一项的数字告诉明明。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：根据题目描述中所描述的序列产生规则构造序列的前9项，然后告诉你一个正整数n，要求你输出序列的第n项。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（1≤n≤9），代表之后所要求的序列的第n项的值。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个整数，即所要求的序列中那一项的数值，每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">121
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">13231
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">11
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">19876594738579297583749567891
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">1432341
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">15435253451
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">1654352534561
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">1765473572753745671
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8
+</TestInput>
+                    <TestOutput xml:space="preserve">18765473857275837456781
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">19876594738579297583749567891
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="073">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+    string str;
+    int n;
+    while (cin &gt;&gt; n) {
+        str = "11";
+        for (int i = 2; i &lt;= n; i++) {
+            for (int j = 1; j &lt; str.size(); j++) {
+                if ((str[j] - '0') + (str[j - 1] - '0') == i) {
+                    str.insert(j, 1, '0' + i);
+                }
+            }
+        }
+        cout &lt;&lt; str &lt;&lt; endl;
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 24 缺失的页码</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明在一家图书馆里工作，他的主要任务是修补缺损的图书。有一次，图书馆里面收到一大批损坏的图书，这些图书有一个特点，每本书页码的编排方式为：（1，2）（3，4）（5，6）……，括号内数字指一张纸的正反两页，每本书都只少了其中的一张书纸，然后还知道剩下的各页码之和是多少。明明现在的主要工作是把那张缺失的页找到，然后再补进一张，这样就完成了图书的修补工作。但是明明发现，这并不是一件很轻松就可以完成的事情，因为有些书非常厚，无法立刻找到缺失的那一张。于是明明只能从头开始，一张一张的翻阅图书，直至找到那一张缺失的页为止，这样的工作效率显然是非常低的。&lt;BR&gt;
+你是一名程序设计专家，同时也是明明的好朋友，你看到明明如此辛苦的工作，就萌发了帮助明明的想法，你问明明能不能把书的页码和（缺失一张纸后的书的页码之和）告诉你，明明说：“当然没问题”，于是就把页码和告诉了你。你得到了页码和后，就写了一个程序，利用程序，很快就算出了缺失的那页纸的页码是多少，并得到了完整的页码总和，这样就极大地帮助了明明，使他的工作很快就完成了，明明也因此请你吃了顿饭，感谢你对他的帮助。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：一本书，中间少了一张纸，剩下的各页码之和为S。已知每张纸有两个相邻页码，编排方式为：（1，2）（3，4）（5，6）……，括号内数字指一张纸的正反两页。你的任务是对于输入的S，求这本书原来的总页数T，以及少掉的那两页的页数，A和B。如果找不到缺失的页码，则输出Impossible。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数S（1≤S≤5050），代表书的页码总和。当S=0的时候，表示输入结束。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为三个整数T、A、B，整数之间用一个空格隔开，三个整数分别表示书完整的页码总和和缺失的那一张书纸的正反面两个页码。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;
+&lt;BR&gt;
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="zero">
+                    <Terminator xml:space="preserve">0</Terminator>
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">Impossible
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">6 5 6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">8
+</TestInput>
+                    <TestOutput xml:space="preserve">Impossible
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5050
+</TestInput>
+                    <TestOutput xml:space="preserve">102 101 102
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1234
+</TestInput>
+                    <TestOutput xml:space="preserve">Impossible
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">789
+</TestInput>
+                    <TestOutput xml:space="preserve">40 15 16
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">25
+</TestInput>
+                    <TestOutput xml:space="preserve">8 5 6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3598
+</TestInput>
+                    <TestOutput xml:space="preserve">86 71 72
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5047
+</TestInput>
+                    <TestOutput xml:space="preserve">100 1 2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">635
+</TestInput>
+                    <TestOutput xml:space="preserve">36 15 16
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="024">#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;memory&gt;
+#define MAXS 105
+#define MAXP 5111
+using namespace std;
+
+struct Table
+{
+    int n;
+    int a;
+    int b;
+}table[MAXP+1];
+
+void initialize()
+{
+    int i,j,k;
+    memset(table,-1,sizeof(table));
+    for(i=2;i&lt;=MAXS;i=i+2)
+    {
+        for(j=1;j&lt;i;j=j+2)
+        {
+            k=((i*(i+1))&gt;&gt;1)-((j&lt;&lt;1)+1);
+            table[k].n=i;
+            table[k].a=j;
+            table[k].b=j+1;
+        }
+    }
+}
+
+int main()
+{
+    initialize();
+    int s;
+    while(scanf("%d",&amp;s)!=EOF)
+    {
+	 if(s==0) break;
+        if(table[s].n!=-1)
+        {
+            printf("%d %d %d\n",table[s].n,table[s].a,table[s].b);
+        }
+        else
+        {
+            printf("Impossible\n");
+        }
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

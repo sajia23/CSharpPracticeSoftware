@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTiku xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tiku Name="001-004" Path="resources\tiku\001-004.xml">
+    <Problem Method="0" State="未解决" Trytime="1" Checktime="0" Title="Problem 1 表格问题" />
+    <Problem Method="0" State="未解决" Trytime="2" Checktime="7" Title="Problem 2 奇妙的数字" />
+    <Problem Method="0" State="未解决" Trytime="88" Checktime="2" Title="Problem 3 求长方形的面积" />
+    <Problem Method="0" State="未解决" Trytime="5" Checktime="4" Title="Problem 4 数列和" />
+  </Tiku>
+  <Tiku Name="005-008" Path="resources\tiku\005-008.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 5 求绝对值" />
+    <Problem Method="0" State="未解决" Trytime="3" Checktime="0" Title="Problem 6 求最大公约数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 7 求反数字字符串" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="6" Title="Problem 8 求小数位数个数" />
+  </Tiku>
+  <Tiku Name="009-012" Path="resources\tiku\009-012.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 9 判断质数" />
+    <Problem Method="5" State="未解决" Trytime="2" Checktime="0" Title="Problem 10 求0的个数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 11 幼儿园分班问题" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 12 门票价格计算" />
+  </Tiku>
+  <Tiku Name="013-016" Path="resources\tiku\013-016.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 13 一个月的天数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 14 打印字母" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 15 阶乘" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 16 折纸问题" />
+  </Tiku>
+  <Tiku Name="017-020" Path="resources\tiku\017-020.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 17 数字之和" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 18 数字反转" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 19 约数之和" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 20 求第几天" />
+  </Tiku>
+  <Tiku Name="021-024" Path="resources\tiku\021-024.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 21 求最高、最低、平均分" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 22 求斐波拉切数列" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 23 求N!" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 24 繁殖问题" />
+  </Tiku>
+  <Tiku Name="025-028" Path="resources\tiku\025-028.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 25 求总分" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 26 字母的前趋或后继" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 27 函数求值" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 28 运费计算" />
+  </Tiku>
+  <Tiku Name="029-032" Path="resources\tiku\029-032.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 29 比较两数大小" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 30 整数排序" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 31 星期几问题" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 32 加密" />
+  </Tiku>
+  <Tiku Name="033-036" Path="resources\tiku\033-036.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 33 这个数字用英文怎么说？" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 34 min" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 35 实数运算" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 36 你的成绩如何？" />
+  </Tiku>
+  <Tiku Name="037-040" Path="resources\tiku\037-040.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 37 繁忙的通讯兵" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 38 怪数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 39 倒序" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 40 一个复杂的公式" />
+  </Tiku>
+  <Tiku Name="041-044" Path="resources\tiku\041-044.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 41 请给我加密" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 42 排序" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 43 回文问题" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 44 输出正整数对应的二进制数" />
+  </Tiku>
+  <Tiku Name="045-048" Path="resources\tiku\045-048.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 45 表达式求值" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 46 发牌" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 47 输出*" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 48 进制转换" />
+  </Tiku>
+  <Tiku Name="049-052" Path="resources\tiku\049-052.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 49 求三数中最大的数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 50 递归函数FAC" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 51 汉诺塔" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 52 一道简单题" />
+  </Tiku>
+  <Tiku Name="053-056" Path="resources\tiku\053-056.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 53 求质数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 54 卖鸭子" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 55 统计字母" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 56 开关灯" />
+  </Tiku>
+  <Tiku Name="057-060" Path="resources\tiku\057-060.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 57 学生信息" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 58 三角" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 59 日期" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 60 国际象棋棋盘问题" />
+  </Tiku>
+  <Tiku Name="mid001-004" Path="resources\tiku\mid001-004.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 1 三角形的个数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 2 纯粹素数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 3 纯粹合数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 4 求数列项" />
+  </Tiku>
+  <Tiku Name="mid005-008" Path="resources\tiku\mid005-008.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 5 最高频率" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 6 按要求输出序列" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 7 特殊四位数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 8 找到最大数" />
+  </Tiku>
+  <Tiku Name="mid009-012" Path="resources\tiku\mid009-012.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 9 螺旋方阵" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 10 阵列" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 11 翻译字符串" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 12 T的倍数N" />
+  </Tiku>
+  <Tiku Name="mid013-016" Path="resources\tiku\mid013-016.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 13 数的整除" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 14 求数列" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 15 abc" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 16 公式求解" />
+  </Tiku>
+  <Tiku Name="mid017-020" Path="resources\tiku\mid017-020.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 17 最大效益" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 18 累加式" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 19 三艘船" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 20 部落人乘法" />
+  </Tiku>
+  <Tiku Name="mid021-024" Path="resources\tiku\mid021-024.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 21 公共汽车" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 22 棋盘" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 23 构造序列" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 24 缺失的页码" />
+  </Tiku>
+  <Tiku Name="mid025-028" Path="resources\tiku\mid025-028.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 25 奇妙的比值" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 26 菱形输出" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 27 牧场安全系统" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 28 小数" />
+  </Tiku>
+  <Tiku Name="mid029-032" Path="resources\tiku\mid029-032.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 29 稀疏矩阵" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 30 N的倍数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 31 扑克牌" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 32 乒乓球" />
+  </Tiku>
+  <Tiku Name="mid033-036" Path="resources\tiku\mid033-036.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 33 最大与最小" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 34 环" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 35 三位素数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 36 矩阵转换" />
+  </Tiku>
+  <Tiku Name="mid037-040" Path="resources\tiku\mid037-040.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 37 字符串排序" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 38 回文数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 39 摩托车" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 40 数字串处理" />
+  </Tiku>
+  <Tiku Name="mid041-044" Path="resources\tiku\mid041-044.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 41 约瑟夫环" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 42 约瑟夫环2" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 43 求字符串的起始位置" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 44 字符串统计" />
+  </Tiku>
+  <Tiku Name="mid045-048" Path="resources\tiku\mid045-048.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 45 找出质数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 46 日期比较" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 47 魔方阵" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 48 最长的单词" />
+  </Tiku>
+  <Tiku Name="mid049-052" Path="resources\tiku\mid049-052.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 49 奖学金" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 50 序列" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 51 树" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 52 三角形" />
+  </Tiku>
+  <Tiku Name="mid053-056" Path="resources\tiku\mid053-056.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 53 回文数2" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 54 加法器" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 55 数列1" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 56 数列2" />
+  </Tiku>
+  <Tiku Name="mid057-060" Path="resources\tiku\mid057-060.xml">
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 57 最大值" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 58 7的倍数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 59 素数" />
+    <Problem Method="0" State="未解决" Trytime="0" Checktime="0" Title="Problem 60 歌德巴赫猜想" />
+  </Tiku>
+</ArrayOfTiku>

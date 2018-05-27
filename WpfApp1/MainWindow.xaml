@@ -1,0 +1,189 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Properties="clr-namespace:WpfApp1.Properties"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:res="clr-namespace:WpfApp1.Properties"
+        xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        Title="编程练习" 
+        Name="window" Icon="resources/TUBIAO2.png">
+    
+    <Grid Name="allwindow">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu DockPanel.Dock="Top" FontSize="15" Grid.Row="0">
+            <MenuItem Header="文件">
+                <MenuItem Header="新建工作空间" Click="AddSpace_Click">
+
+                </MenuItem>
+                <MenuItem Header="保存工作空间" Click="SaveSpace_Click">
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="设置" Click="OpenShezhi_Click"></MenuItem>
+            <MenuItem Header="帮助" Click="Help_Click"></MenuItem>
+        </Menu>
+        <Grid Name="paperAndEdit"  ShowGridLines="false" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="c1" Width="*" MinWidth="400"></ColumnDefinition>
+                <ColumnDefinition Name="c2" Width="5"></ColumnDefinition>
+                <ColumnDefinition Name="c3" Width="*" MinWidth="400"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Name="gs" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Width="5" HorizontalAlignment="Stretch" Background="#CCCEDB"></GridSplitter>
+            <GridSplitter Name="gs2" Grid.Column="2" Grid.Row="1" Height="5" HorizontalAlignment="Stretch" Background="#CCCEDB"></GridSplitter>
+            <Grid Name="edit" Grid.Column="2" Grid.Row="0">
+                <DockPanel Margin="0,0,0,0">
+                    <ToolBar DockPanel.Dock="Top">
+                        <Button Name="hide" Content="隐藏" Click="Button_Click_qiehuan" />
+                        <Button Name="btn_compiler" Content="编译" Click="Button_Click_compile"/>
+                        <Button Name="btn_run" Content="运行" Click="Button_Click_run" VerticalAlignment="Bottom"/>
+                        <Button Name="btn_test" Content="提交" Click="Button_Click_test"/>
+                        <Button Name="btn_diy" Content="新建标签页" Click="Button_Click_diy"/>
+                        
+                    </ToolBar>
+                    <TabControl Name="tabcontrol" DockPanel.Dock="Bottom" Tag="100">
+                        
+                    </TabControl>
+                </DockPanel>
+            </Grid>
+            <TabControl Name="liulantab"  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" TabStripPlacement="Left">
+                <TabControl.DataContext>
+                    <local:LiulanViewModel />
+                </TabControl.DataContext>
+                <TabItem Header="试&#13;题">
+                    <Grid Name="paper">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Name="papershow_r1" Height="40"></RowDefinition>
+                            <RowDefinition Name="papershow_r2" Height="8*"></RowDefinition>
+                            
+                        </Grid.RowDefinitions>
+                        <Grid Name="paperChoose" Grid.Row="0" ShowGridLines="False" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="选择题库" Click="Button_Click_tiku" Grid.Column="0" Grid.Row="0" Margin="6,6,6,6"></Button>
+                            <Button Content="解答此题" Click="Button_Click_solve" Grid.Column="1" Grid.Row="0" Margin="6,6,6,6"></Button>
+                            <Button Content="上一题" Command="{Binding Path=LastCommand}" Grid.Column="2" Grid.Row="0" Margin="6,6,6,6"></Button>
+                            <Button Content="下一题" Command="{Binding Path=NextCommand}" Grid.Column="3" Grid.Row="0" Margin="6,6,6,6"></Button>
+                        </Grid>
+                        <Grid Name="paperTitleAndAuthor" Grid.Row="1" ShowGridLines="False" DataContext="{Binding Path=Pr}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Name="descc"></RowDefinition>
+                                <RowDefinition Height="5"></RowDefinition>
+                                <RowDefinition Name="inputt"></RowDefinition>
+                                <RowDefinition Height="5"></RowDefinition>
+                                <RowDefinition Name="outputt"></RowDefinition>
+                                <RowDefinition Height="5"></RowDefinition>
+                                <RowDefinition Name="inandout"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Name="desc" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                                <GroupBox Header="题目描述">
+                                    <ScrollViewer>
+                                        <TextBox IsReadOnly="True" BorderThickness="0" Text="{Binding Path=Desc}" TextWrapping = "Wrap" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                                    </ScrollViewer>
+                                </GroupBox>
+                            </Grid>
+                            <GridSplitter Name="descAndinput" Background="#CCCEDB" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Height="5" HorizontalAlignment="Stretch"></GridSplitter>
+                            <Grid Name="input" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                                <GroupBox Header="输入要求">
+                                    <ScrollViewer>
+                                        <TextBox IsReadOnly="True" BorderThickness="0" Text="{Binding Path=Input}" TextWrapping = "Wrap" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                                    </ScrollViewer>
+                                </GroupBox>
+                            </Grid>
+                            <GridSplitter Name="inputAndoutput" Background="#CCCEDB" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Height="5" HorizontalAlignment="Stretch"></GridSplitter>
+                            <Grid Name="output" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+                                <GroupBox Header="输出要求">
+                                    <ScrollViewer>
+                                        <TextBox IsReadOnly="True" BorderThickness="0" Text="{Binding Path=Output}" TextWrapping = "Wrap" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                                    </ScrollViewer>
+                                </GroupBox>
+                            </Grid>
+                            <GridSplitter Grid.Column="0" Grid.Row="6" Background="#CCCEDB" Grid.ColumnSpan="2" Height="5" HorizontalAlignment="Stretch"></GridSplitter>
+                            <Grid Name="showInAndOut" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" DataContext="{Binding Path=Tests[0]}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Name="Input"></ColumnDefinition>
+                                    <ColumnDefinition Name="Ouput"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <GroupBox Header="Input" Grid.Column="0">
+                                    <TextBox IsReadOnly="True" BorderThickness="0" Text="{Binding Path=Input}" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                                </GroupBox>
+                                <GroupBox Header="Output" Grid.Column="1">
+                                    <TextBox IsReadOnly="True" BorderThickness="0" Text="{Binding Path=Output}" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                                </GroupBox>
+                            </Grid>
+                            <TextBox IsReadOnly="True" BorderThickness="0" Grid.Column="0" Grid.Row="0" Name="title"  Text="{Binding Path=Title}" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                            <TextBox IsReadOnly="True" BorderThickness="0" Grid.Column="1" Grid.Row="0" Name="author" Text="{Binding Path=Author}" FontSize="{Binding Path=liulandaxiao,Source={x:Static Properties:Settings.Default}}" FontFamily="{Binding Path=liulanziti,Source={x:Static Properties:Settings.Default}}"></TextBox>
+                        </Grid>
+                        
+                        
+                    </Grid>
+                </TabItem>
+                <TabItem Header="工&#13;作&#13;空&#13;间">
+                    <TreeView Name="treeview" PreviewMouseRightButtonDown="Treeview_PreviewMouseRightDown" PreviewMouseLeftButtonDown="Treeview_PreviewMouseLeftDown">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Solvedproblem}">
+                                <TextBlock VerticalAlignment="Center" FontSize="14" Text="{Binding Path=Name}" Margin="2,0,0,0"></TextBlock>
+                                <HierarchicalDataTemplate.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Solution}">
+                                        <TextBlock VerticalAlignment="Center" FontSize="14" Text="{Binding Path=Name}" Margin="2,0,0,0"></TextBlock>
+                                        <HierarchicalDataTemplate.ItemTemplate>
+                                            <HierarchicalDataTemplate ItemsSource="{Binding Classfile}">
+                                                <TextBlock VerticalAlignment="Center" FontSize="14" Text="{Binding Path=Name}" Margin="2,0,0,0"></TextBlock>
+                                                <HierarchicalDataTemplate.ItemTemplate>
+                                                    <HierarchicalDataTemplate ItemsSource="{Binding Reference}">
+                                                        <TextBlock VerticalAlignment="Center" FontSize="14" Text="{Binding Path=Name}" Margin="2,0,0,0"></TextBlock>
+                                                        <HierarchicalDataTemplate.ItemTemplate>
+                                                            <HierarchicalDataTemplate ItemsSource="{Binding References}">
+                                                                <TextBlock VerticalAlignment="Center" FontSize="14" Text="{Binding Path=Name}" Margin="2,0,0,0"></TextBlock>
+                                                                <HierarchicalDataTemplate.ItemTemplate>
+                                                                    <HierarchicalDataTemplate>
+                                                                        <TextBlock VerticalAlignment="Center" FontSize="14" Text="{Binding Path=Name}" Margin="2,0,0,0"></TextBlock>
+                                                                    </HierarchicalDataTemplate>
+                                                                </HierarchicalDataTemplate.ItemTemplate>
+                                                            </HierarchicalDataTemplate>
+                                                        </HierarchicalDataTemplate.ItemTemplate>
+                                                    </HierarchicalDataTemplate>
+                                                </HierarchicalDataTemplate.ItemTemplate>
+                                            </HierarchicalDataTemplate>
+                                            
+                                        </HierarchicalDataTemplate.ItemTemplate>
+                                        
+                                    </HierarchicalDataTemplate>
+                                </HierarchicalDataTemplate.ItemTemplate>
+                            </HierarchicalDataTemplate>
+                            
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </TabItem>
+                
+            </TabControl>
+
+            <Grid Name="Output"  ShowGridLines="false" Grid.Column="2" Grid.Row="2">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBox Name="tb" IsReadOnly="True" TextWrapping = "Wrap"></TextBox>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</Window>

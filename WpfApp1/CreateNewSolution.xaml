@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp1.CreateNewSolution"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="创建新的解题方法" Height="200" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition >
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center" Height="20">
+            <TextBlock  TextWrapping="Wrap" Text="解题方法:" FontSize="16" />
+            <TextBox Name="nametextbox"   TextWrapping="Wrap" Text=""  Width="120" Grid.Row="0"/>
+        </StackPanel>
+        
+        <Button Content="确定" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="75" Grid.Row="1" Click="CreateNewSolution_Click" FontSize="16" />
+
+
+    </Grid>
+</Window>

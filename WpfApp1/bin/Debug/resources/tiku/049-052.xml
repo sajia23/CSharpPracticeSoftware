@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFBH+JjI5Zur9vrZG8/CxdvR2feVQAhQ5a6xCn5xsff8pP6devcjXA3+stQ==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 49 求三数中最大的数</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">给定3个数，求出三数中最大的数。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成，其中包含三个正整数，整数的范围在[0，1024]，他们以空格分隔，在行首和行尾没有多余的空格，两组数据之间也没有多余的空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。每组输出数据由一行组成，该行包含一个正整数，即输入的三个数中最大的数。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1 2 3
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3 2 1
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1 1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3 2 2
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1024 1023 4
+</TestInput>
+                    <TestOutput xml:space="preserve">1024
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="53">#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+	int a,b,c;
+	while(cin&gt;&gt;a&gt;&gt;b&gt;&gt;c)
+	{
+		if(a&lt;b)
+			a=b;
+		if(a&gt;c)
+			cout&lt;&lt;a&lt;&lt;endl;
+		else
+			cout&lt;&lt;c&lt;&lt;endl;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 50 递归函数FAC</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">现定义了一个递归函数fac求n！&lt;BR&gt;
+
+n！可以用以下递归方法表示：
+&lt;BR&gt;
+&lt;BR&gt;
+1）当n＝0时，fac (n) = 1&lt;BR&gt;
+2）当n≥1时，fac (n) = n*fac(n-1)&lt;BR&gt;
+&lt;BR&gt;
+要求用此方法求出n！</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成，输入数据为整型数n，0≤n≤20。两组数据之间没有多余的空行。在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。每组输出数据由一行组成，每行一个整数，代表n的阶乘。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">0
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">24
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">120
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">720
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">3628800
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">11
+</TestInput>
+                    <TestOutput xml:space="preserve">39916800
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">20
+</TestInput>
+                    <TestOutput xml:space="preserve">2432902008176640000
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="few">#include&lt;iostream&gt;
+
+using namespace std;
+
+long long fac(int n)
+{
+	if (n==0) return 1;
+	return n*fac(n-1);
+}
+
+int main()
+{
+	int n;
+	while(cin&gt;&gt;n)
+		cout&lt;&lt;fac(n)&lt;&lt;endl;
+
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 51 汉诺塔</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">汉诺塔问题。给定三根杆A、B、C和大小不同的几个盘子。这些盘子按尺寸递减顺序套在A杆上。任务是把这些盘子从A杆移到C杆且保持原来堆放顺序。在实现任务时，每次只能移动一个盘子，不允许大的盘子放在小的盘子上面，B杆可以作为辅助存放杆。求出每一步该如何移动。（此移动过程的总步骤必须是最少步骤）。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成，每行输入一整数盘子数n，1≤n≤10。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。每组输出数据由一行组成，该行中输出每一次移动的情况，一行一次移动，如从A移到B，A----B。两组数据之间有一个空行，最后一组输出数据后无空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">A----B
+A----C
+B----C
+
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">A----C
+A----B
+C----B
+A----C
+B----A
+B----C
+A----C
+
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">A----C
+
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">A----C
+A----B
+C----B
+A----C
+B----A
+B----C
+A----C
+A----B
+C----B
+C----A
+B----A
+C----B
+A----C
+A----B
+C----B
+A----C
+B----A
+B----C
+A----C
+B----A
+C----B
+C----A
+B----A
+B----C
+A----C
+A----B
+C----B
+A----C
+B----A
+B----C
+A----C
+
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+C----B
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+B----A
+C----A
+C----B
+A----B
+C----A
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+A----B
+C----A
+C----B
+A----B
+A----C
+B----C
+B----A
+C----A
+B----C
+A----B
+A----C
+B----C
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="ttt">#include&lt;iostream&gt;
+
+using namespace std;
+
+void move(int n,char a,char b,char c)
+{
+	if (n&gt;0)
+	{
+		move(n-1,a,c,b);
+		cout&lt;&lt;a&lt;&lt;"----"&lt;&lt;b&lt;&lt;endl;
+		move(n-1,c,b,a);
+	}
+}
+
+int main()
+{
+	int n;
+	int r=0;
+	while(cin&gt;&gt;n)
+	{
+		if(r!=0) cout&lt;&lt;endl;
+		move(n,'A','C','B');
+		r++;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 52 一道简单题</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">一家水果店出售四种水果，每公斤价格的苹果（代码为a）1.5元，橘子（代码为o）1.4元，香蕉（代码为b）1.48元，菠萝（代码为p）1.08元。编一个程序，使售货员只要在键盘上打入货品的代码及重量，计算机将显示货品名、单价、重量及总价。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。第一行为一个整数n，表示一共有n组测试数据。在接下来的n组测试数据中，每组数据先是输入一个m，表示有m件货品要被购买。在接下来的m行中，每行输入两个值d，g。d表示货品的代码，g表示重量。两组数据之间没有多余的空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。对应每组输入，输出货品名、单个总价及全部总价。具体格式参照样例输出：第一行apple前为7个空格，之后为2个空格，其他水果名后都是1个空格，sum后没有空格；第二行price后有2个空格，其后关于价格的表示多为占7格2位小数且左对齐，但其中pineapple为占10格2位小数且左对齐，注意sum的价格仍然占7格，如第一组样例中的54.60后还有2个空格；第三行weight后有1个空格，其后的数据与第二行一致。每两组数据之间有一个空行，最后一组测试数据之后没有空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4
+a 10
+o 10
+b 10
+p 10
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  15.00  14.00  14.80  10.80     54.60  
+weight 10.00  10.00  10.00  10.00     40.00  
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+a 10
+a 10
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  30.00  0.00   0.00   0.00      30.00  
+weight 20.00  0.00   0.00   0.00      20.00  
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+o 3.65
+b 2.47
+a 8.47
+p 8.92
+o 4.94
+o 5.45
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  12.71  19.66  3.66   9.63      45.65  
+weight 8.47   14.04  2.47   8.92      33.90  
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">9
+o 7.53
+o 3.86
+o 9.42
+b 9.78
+p 2.1
+a 6.82
+o 0.21
+b 3.73
+b 8.86
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  10.23  29.43  33.11  2.27      75.03  
+weight 6.82   21.02  22.37  2.10      52.31  
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+a 2.88
+b 8.8
+o 4.08
+p 3.8
+b 7.55
+o 2.18
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  4.32   8.76   24.20  4.10      41.39  
+weight 2.88   6.26   16.35  3.80      29.29  
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1
+a 5.72
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  8.58   0.00   0.00   0.00      8.58   
+weight 5.72   0.00   0.00   0.00      5.72   
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8
+p 9.66
+p 6.4
+o 6.71
+a 6.51
+o 2.43
+p 7.05
+a 4.59
+p 7.11
+</TestInput>
+                    <TestOutput xml:space="preserve">       apple  orange banana pineapple sum
+price  16.65  12.80  0.00   32.64     62.08  
+weight 11.10  9.14   0.00   30.22     50.46  
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="52">#include&lt;iostream.h&gt;
+#include&lt;stdio.h&gt;
+double sa,so,sb,sp,sum,ga,go,gb,gp,gsum;
+double pa = 1.5,po = 1.4,pb = 1.48,pp = 1.08;
+int main(){
+	char d;
+	double g;
+	int n,m;
+	int r=0;
+	while(cin&gt;&gt;n){
+		sa = so = sb = sp = sum = ga = go = gb = gp = gsum = 0;
+		for(int i=0;i&lt;n;i++){
+			cin&gt;&gt;d&gt;&gt;g;
+			switch(d){
+				case 'a':sa+=pa*g;ga+=g;sum+=pa*g;break;
+				case 'o':so+=po*g;go+=g;sum+=po*g;break;
+				case 'b':sb+=pb*g;gb+=g;sum+=pb*g;break;
+				case 'p':sp+=pp*g;gp+=g;sum+=pp*g;break;
+			}
+			gsum+=g;
+		}
+		if(r!=0) printf("\n");
+		printf("       apple  orange banana pineapple sum\n");
+		printf("price  %-7.2lf%-7.2lf%-7.2lf%-10.2lf%-7.2lf\n",sa,so,sb,sp,sum);
+		printf("weight %-7.2lf%-7.2lf%-7.2lf%-10.2lf%-7.2lf\n",ga,go,gb,gp,gsum);
+		r++;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

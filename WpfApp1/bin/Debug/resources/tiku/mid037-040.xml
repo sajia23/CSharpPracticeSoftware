@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFGTgTDRPhI0rekjs3csRV4XBB+KpAhQhCoenujmEPT7X3BgpAZupbKoybQ==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 37 字符串排序</Title>
+            <Author>ZhouMingLiang</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明刚刚开始学英文，对于26个英文字母的顺序总是记不住，每次默写英文字母的时候，顺序总是前后颠倒。明明的爸爸对此相当着急，想有没有很好的办法来帮助明明记住字母的顺序。一天，明明的爸爸突然想到了一个游戏，能够帮助明明记住英文字母。这个游戏如下，给明明一个任意长度的英文字串，其中只包含小写字母，然后让明明对字符串中的字母排序，然后再把排完序的字符串写出来，如果连续写对10次的话，明明的爸爸就会奖励他，带他出去吃KFC。&lt;BR&gt;&lt;BR&gt;
+
+例如：有一个字符串为asdf，经过排序后的字符串就是adfs。&lt;BR&gt;&lt;BR&gt;
+
+明明显然对这个游戏非常感兴趣（其实明明更感兴趣的是那顿KFC），接受了他爸爸的提议，玩起了这个游戏。但是明明的爸爸在出题目考明明的时候，自己却犯了难，用英文随便写出一个无序的英文字符串是很简单的，但是排序的话却要费一些功夫，而且还不能出错，否则就无法知道明明做的对不对了。于是明明的爸爸请你帮忙，帮他写一个排序程序，来输出排序后的字符串。&lt;BR&gt;&lt;BR&gt;
+
+明明爸爸的问题可以归结为：输入一行字符串，全部由小写字母构成，对字符串按26个英文字母的先后顺序进行排序，然后输出。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行由一个字符串组成，字符串中只包含小写字母，字符串的长度不超过100个字符。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个排序后的字符串。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">asdf
+</TestInput>
+                    <TestOutput xml:space="preserve">adfs
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">abcd
+</TestInput>
+                    <TestOutput xml:space="preserve">abcd
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">shflsahfslfdjsldfsjdfvskdfs
+</TestInput>
+                    <TestOutput xml:space="preserve">addddffffffhhjjklllsssssssv
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">sfjklsofywuotwexvcss
+</TestInput>
+                    <TestOutput xml:space="preserve">ceffjkloosssstuvwwxy
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">abcdshfsaohlohwruiehdfvksvbdfjbvkhfbvjsdbvcsdvds
+</TestInput>
+                    <TestOutput xml:space="preserve">aabbbbbccddddddeffffhhhhhijjkkloorssssssuvvvvvvw
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">sdsds
+</TestInput>
+                    <TestOutput xml:space="preserve">ddsss
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">a
+</TestInput>
+                    <TestOutput xml:space="preserve">a
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">dddddddddddddddddddddd
+</TestInput>
+                    <TestOutput xml:space="preserve">dddddddddddddddddddddd
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">sfhdfwhiueqwertyuiopasdfghjklzxcvbnm
+</TestInput>
+                    <TestOutput xml:space="preserve">abcddeefffghhhiijklmnopqrsstuuvwwxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">qwertyuiopasdfghjklzxcvbnm
+</TestInput>
+                    <TestOutput xml:space="preserve">abcdefghijklmnopqrstuvwxyz
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="037">#include&lt;iostream&gt;   //
+#include&lt;cstring&gt;   //
+
+using namespace std;   //
+
+int main()   //
+{
+	char s[100];   //
+	int i,j,len,temp;   //
+	while(cin.getline(s,100))   //
+	{
+			len = strlen(s);   //
+			for(i = 0; i &lt; len; i++)    //
+				for (j = i+1; j &lt; len; j++)   //
+				if (s[i] &gt; s[j])   //
+				{
+					temp =s[i];   //
+					s[i] = s[j];   //
+					s[j] = temp;   //
+				}
+			for (i = 0 ;i &lt; len; i++)   //
+				cout&lt;&lt;s[i];   //
+			cout&lt;&lt;endl;   //
+	}
+	return 0;   //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 38 回文数</Title>
+            <Author>ZhouMingLiang</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">有一天，明明在做数学作业的时候，发现了一组很有趣的数字。例如1、11、121、1331等等。他发现这些数字都是左右对称的，即不管你把这些数字从左读到右还是从右读到左，读出来的数字都是一样的。于是明明就把这个发现告诉了他爸爸。明明的爸爸是一名数学专家，他当然对这种类型的数字早有研究，他对明明说：“这些是回文数，它是一种特殊的数字现象，即这些数字的左右两边是对称的。例如：121左右两边对称，1331左右也是对称的。”明明觉得这很有趣，接着问他爸爸还有什么和这类回文数有关的好玩的东西，明明的爸爸于是就教了明明一种方法，这种方法是从任意一个整数出发，经过某种计算，就可以得到一个回文数。&lt;BR&gt;&lt;BR&gt;
+
+这个方法如下：&lt;BR&gt;
+例如首先给你一个数19，然后把它的个位与最高位交换，得到它的逆序数91，然后两数相加，即19+91=110，我们得到110，因为110不是回文数，因此我们继续上面的步骤，110+11=121，现在我们就得到了一个回文数121。通过这种方法，我们就可以求得一个与某一个整数有关的回文数。&lt;BR&gt;&lt;BR&gt;
+
+	明明很聪明，很快就掌握了这个方法，但是他也发现了一个问题，就是有时候计算一个回文数，需要重复很多次以上的步骤，这使得明明很烦恼。于是他就求助于你，请你帮他写一个程序，通过程序来完成以上求回文数的过程。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个整数，通过上面叙述的求回文数的方法，求出回文数，并输出求解过程。输入数据保证该回文数小于2&lt;SUP&gt;31&lt;/SUP&gt;。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行有一个整数n（10≤n≤10000），即要求回文数的那个整数。当n=0时，表示输入结束。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一行或多行的回文数求解过程，直到求出回文数为止。每行的格式如下a+b=c，其中a是原来的数，b是a的交换后的那个数，c是a+b的结果，详细格式请参考输出样例。每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="zero">
+                    <Terminator xml:space="preserve">0</Terminator>
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">1+1=2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">2+2=4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4243
+</TestInput>
+                    <TestOutput xml:space="preserve">4243+3424=7667
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">66
+</TestInput>
+                    <TestOutput xml:space="preserve">66+66=132
+132+231=363
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">88
+</TestInput>
+                    <TestOutput xml:space="preserve">88+88=176
+176+671=847
+847+748=1595
+1595+5951=7546
+7546+6457=14003
+14003+30041=44044
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">19
+</TestInput>
+                    <TestOutput xml:space="preserve">19+91=110
+110+11=121
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">15
+</TestInput>
+                    <TestOutput xml:space="preserve">15+51=66
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6534
+</TestInput>
+                    <TestOutput xml:space="preserve">6534+4356=10890
+10890+9801=20691
+20691+19602=40293
+40293+39204=79497
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8674
+</TestInput>
+                    <TestOutput xml:space="preserve">8674+4768=13442
+13442+24431=37873
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8756
+</TestInput>
+                    <TestOutput xml:space="preserve">8756+6578=15334
+15334+43351=58685
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="038">#include&lt;iostream&gt;   //
+#include&lt;cstring&gt;   //
+
+using namespace std;   //
+
+bool IsRec(long num)   //
+{
+	int s[20];   //
+	int len = 0;   //
+	while(num)   //
+	{
+		s[len++] = num%10;   //
+		num/=10;   //
+	}
+	int i;   //
+	for (i = 0; i &lt; len/2; i++)   //
+	{
+		if (s[i] != s[len-1-i])   //
+			return false;   //
+	}	
+	return true;   //
+}
+
+long GetRec(long num)   //
+{
+	int n = 0;   //
+	while(num)   //
+	{
+		n = n*10 + num%10;   //
+		num/=10;   //
+	}
+	return n;   //
+}
+int main()   //
+{
+	long n , m;   //
+	while(cin&gt;&gt;n)   //
+	{
+		if(n==0) break;
+		while(1)   //
+		{
+			m = GetRec(n);   //
+			cout&lt;&lt;n&lt;&lt;"+"&lt;&lt;m&lt;&lt;"="&lt;&lt;m+n&lt;&lt;endl;   //
+			n = m+n;   //
+			if (IsRec(n))   //
+				break;   //
+		}
+	}
+	return 0;   //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 39 摩托车</Title>
+            <Author>ZhouMingLIang</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明是一家摩托车厂的老板，他的厂为了迎合市场中不同消费者的需求，会生产不同型号的摩托车，这为明明的厂带来了不小的收益。有一次，一位大客户来到明明的厂洽谈生意，他需要采购一批型号各不相同的摩托车，然后他把需要的摩托车的型号告诉了明明，接着明明就需要在他所生产的摩托车中寻找到型号匹配的，如果有则卖给那个客户，如果没有则只能对客户说抱歉了。明明忙了一个上午，终于把那个客户需要的摩托车全部配齐了，然后成功的谈成了这笔生意。&lt;BR&gt;
+事后，明明发现了一个问题，如果每个客户来，都需要这样忙一个上午，才能够知道自己生产的摩托车能否满足客户的需要，这样的工作效率实在太低了，更有可能损失很多客户，这样对工厂未来的发展也是很不利的。于是明明找到了你，你是一名程序设计专家，明明希望你能够帮他写一个程序，程序中记录了他工厂生产的所有摩托车的数据，然后当有客户拿着摩托车的订单来洽谈生意时，只要在这个程序中输入摩托车的型号数据，程序就能够查询出工厂是否生产这类的摩托车，这样就能提高明明工厂的工作效率，有助于工厂进一步发展。&lt;BR&gt;&lt;BR&gt;
+
+摩托车需要记录的数据有以下一些：摩托车的型号，摩托车的颜色和摩托车马达的类型。&lt;BR&gt;&lt;BR&gt;
+
+例如，客户需要的摩托车型号如下：&lt;BR&gt;&lt;BR&gt;
+
+摩托车型号&lt;BR&gt;
+a1&lt;BR&gt;
+a2&lt;BR&gt;&lt;BR&gt;
+
+明明拥有的摩托车类型如下：&lt;BR&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;摩托车型号&lt;/td&gt;&lt;td&gt;摩托车颜色&lt;/td&gt;&lt;td&gt;摩托车马达型号&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;a1&lt;/td&gt;&lt;td&gt;yellow&lt;/td&gt;&lt;td&gt;r1&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;a3&lt;/td&gt;&lt;td&gt;red&lt;/td&gt;&lt;td&gt;r3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;a4&lt;/td&gt;&lt;td&gt;blue&lt;/td&gt;&lt;td&gt;r4&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+从中可以看出，明明的工厂只有a1这个型号的摩托车。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：写一个程序，程序中输入客户需要的摩托车型号和明明工厂有的摩托车的型号。在记录明明工厂的摩托车时，还要记录摩托车的颜色和摩托车马达的类型。程序要判断明明工厂拥有的摩托车是否能满足客户的需要。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据有多行，测试数据的第一行有两个整数n（0&amp;lt;n&amp;lt;21）、m（0&amp;lt;m&amp;lt;100），分别表示客户需要的摩托车的型号的数量和明明工厂拥有的摩托车的型号的数量。接下来的n行，表示客户所需要的摩托车型号，再接下来的m行，表示明明工厂拥有的摩托车型号，另外还包括摩托车的颜色和马达类型。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一行或多行数据，这些数据表示明明工厂可以满足客户需要的摩托车的型号、颜色和马达型号，这三个数据之间用一个空格隔开。如果明明工厂没有一种型号的摩托车可以满足客户的需要，则输出“Can not found!”，不包括双引号。详细格式请参考输出样例。每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2 3
+a1
+a2
+a1 yellow r1
+a3 red r3
+a4 blue r4
+</TestInput>
+                    <TestOutput xml:space="preserve">a1 yellow r1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2 4
+a1
+a2
+a2 green r2
+a3 red r3
+a4 blue r4
+a1 yellow r1
+</TestInput>
+                    <TestOutput xml:space="preserve">a1 yellow r1
+a2 green r2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3 5
+a1
+a2
+a3
+b1 blue r1
+c1 red r2
+d1 blue r3
+a1 green r2
+a2 yellow r1
+</TestInput>
+                    <TestOutput xml:space="preserve">a1 green r2
+a2 yellow r1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3 5
+a1
+a2
+a3
+b1 blue r1
+c1 red r2
+a3 blue r3
+a1 green r2
+a2 yellow r1
+</TestInput>
+                    <TestOutput xml:space="preserve">a1 green r2
+a2 yellow r1
+a3 blue r3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">10 5
+a1
+a2
+a3
+b1
+b2
+b3
+c1
+c2
+c3
+d1
+e1 blue r12
+g1 red r23
+f3 blue r34
+h1 green r62
+i2 yellow r17
+</TestInput>
+                    <TestOutput xml:space="preserve">Can not found!
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="039">#include&lt;iostream&gt;   //
+#include&lt;cstring&gt;   //
+
+using namespace std;   //
+
+int n,m;   //
+struct Motor  //
+{
+	char MotorName[7];   //
+	char Color[7];   //
+	char Rider[7];   //
+	bool f;   //
+}motor[101];   //
+
+char motorList[21][7];   //
+
+void input()   //
+{
+	int i;   // 
+	for (i = 0; i &lt; n; i++)    //
+		cin&gt;&gt;motorList[i];   //
+	for (i = 0; i &lt; m; i++)   //
+	{
+		cin&gt;&gt;motor[i].MotorName&gt;&gt;motor[i].Color&gt;&gt;motor[i].Rider;   //
+		motor[i].f  = false;   //
+	}
+}
+int FindMotor(char *motorName)   //
+{
+	int i;   //
+	for (i = 0; i &lt; m; i++)   //
+	if (strcmp(motor[i].MotorName , motorName)==0)   //
+		return i;   //
+	return -1;   //
+} 
+
+void sort()   //
+{
+	int i,j;   //
+	Motor temp;   //
+	for (i = 0; i &lt; m; i++)     //
+		for (j = i+1; j &lt; m; j++)   //
+	if (strcmp(motor[i].MotorName , motor[j].MotorName) &gt; 0)   //
+	{
+		temp = motor[i];   //
+		motor[i] = motor[j];   //
+		motor[j] = temp;   //
+	}	
+}
+
+void output()   //
+{
+	int i;   //
+	for (i = 0; i &lt; m; i++)    //
+	if (motor[i].f)   //
+		cout&lt;&lt;motor[i].MotorName&lt;&lt;" "&lt;&lt;motor[i].Color&lt;&lt;" "&lt;&lt;motor[i].Rider&lt;&lt;endl;   //
+}
+void slv()   //
+{
+	int i , j;   //
+	bool found = false;   //
+	for (i = 0; i &lt; n; i++)    //
+	{
+		j = FindMotor(motorList[i]);   //
+		if (j  != -1)   //
+		{
+			motor[j].f = true;   //
+			found = true;   //
+		}
+	}
+	if (!found)   //
+		cout&lt;&lt;"Can not found!"&lt;&lt;endl;   //
+	else 
+		output();   //
+}
+int main()   //
+{
+	while(cin&gt;&gt;n&gt;&gt;m)   //
+	{
+		input();   //
+		sort();   //
+		slv();   //
+	}
+	return 0;   //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 40 数字串处理</Title>
+            <Author>ZhouMingLiang</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明的爸爸经常对明明进行数学启蒙教育。有一天他和明明做了一个游戏，对一串数字进行处理。明明的爸爸首先给明明一串数字，在这串数字中有很多数字会连续重复出现很多次，爸爸就要求明明把其中连续重复出现次数最多的那个数字找出来。如果有很多个数字连续出现的次数相同，即重复出现次数最多的数字不止一个，那就要明明找出第一次出现该重复次数的那个数字。&lt;BR&gt;&lt;BR&gt;
+
+例如有一串数字：2 2 2 1 1 1，其中2出现了3次，1也出现了3次，而明明要找出的那个数字是2，因为2是第一次重复出现3次的那个数字。&lt;BR&gt;&lt;BR&gt;
+
+明明的爸爸现在已经设计好了很多组这样的数据，但是他不想自己来寻找，他想让你帮他写一个程序，找出出现次数最多的那个数字，然后他手中就有一份标准答案，可以用来检查明明到底做得对不对。&lt;BR&gt;&lt;BR&gt;
+
+明明爸爸的问题可以归结为：给你一串数字，找出在这串数字中连续出现次数最多的那个数字；若有多个数字连续出现的次数相当，则找出第一次出现该次数的那个数字。 
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据有2行，测试数据的第一行有1个整数n（1&amp;lt;n&amp;lt;100），表示数字串中有几个数；测试数据的第二行有n个数，数字串中的数字k，k（1 ≤k ≤100），每个数字之间用一个空格隔开。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为两个整数：出现次数最多的那整数，以及它的出现次数。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">6
+2 2 2 1 1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">2 3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10
+1 1 1 2 2 2 2 3 3 3
+</TestInput>
+                    <TestOutput xml:space="preserve">2 4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">20
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+</TestInput>
+                    <TestOutput xml:space="preserve">1 1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">20
+20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+</TestInput>
+                    <TestOutput xml:space="preserve">20 1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+3 3 3
+</TestInput>
+                    <TestOutput xml:space="preserve">3 3
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="040">#include&lt;iostream&gt;   //
+#include&lt;cstring&gt;    //
+
+using namespace std;
+
+int main()   //
+{
+	int n , front , num , cnt;   //
+	int maxn , mnum;   //
+	while(cin&gt;&gt;n)     //
+	{
+		front = -1;   //
+		cnt = 0;   //
+		maxn = 0;   //
+		for (int i = 0; i &lt; n; i++)   //
+		{
+			cin &gt;&gt; num;   //
+			if (front == num)   //
+				cnt++;   //
+			else
+			{
+				if (cnt &gt; maxn)   //
+				{
+					maxn = cnt;   //
+					mnum = front;   //
+				}
+				front = num;   //
+				cnt = 1;   //
+			}
+		}
+		if (cnt &gt; maxn)   //
+		{
+			maxn = cnt;   //
+			mnum = front;   //
+		}	
+		cout&lt;&lt;mnum&lt;&lt;" "&lt;&lt;maxn&lt;&lt;endl;   //
+	}
+	return 0;   //
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

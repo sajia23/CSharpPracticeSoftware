@@ -1,0 +1,2 @@
+文档中的毕业论文只是大概说明，具体请看源码，
+安装包目录：SetupForCSharpTrain\Debug

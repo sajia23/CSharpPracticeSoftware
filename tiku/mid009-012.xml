@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MC0CFQCNoHXaQ0jMC12oGnVn1IQpapGbwwIUPVji5lPmmJXrQaASyJ/vSqD7FNM=</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 9 螺旋方阵</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明在上学的时候，参加数学兴趣班。在班上，老师介绍了一种非常有趣的方阵，称之为螺旋方阵。该方阵一共由n×n个正整数构成（我们称之为n阶螺旋方阵），即共有n行n列。方阵中的数字从1开始递增，数字的排序规则是从左上角出发由1开始排序，并按顺时针方向旋进，即先排最外面的一圈，然后排里面的一圈，以此类推，直到排到最后一个数为止。例如一个4阶的螺旋方阵，一共有4×4=16个正整数构成，数字从1递增到16，最后排出来的方阵如下：&lt;BR&gt;
+
+&lt;BR&gt;1&amp;nbsp;2&amp;nbsp;3&amp;nbsp;4
+&lt;BR&gt;12&amp;nbsp;13&amp;nbsp;14&amp;nbsp;5
+&lt;BR&gt;11&amp;nbsp;16&amp;nbsp;15&amp;nbsp;6
+&lt;BR&gt;10&amp;nbsp;9&amp;nbsp;8&amp;nbsp;7
+&lt;BR&gt;&lt;BR&gt;
+明明回家后想自己动手构造这样的螺旋方阵。他从n=1开始构造，但是他发现当n越来越大时，螺旋方阵的复杂性就越高，然后构造出来的方阵就越容易出错。为了降低构造方阵的出错率，提高构造速度，明明就求助于你，请你帮他写一个程序，来构造螺旋方阵。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个正整数n，请你按题目描述中所述的方法，构造出n阶的螺旋方阵。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅有一个正整数n（1≤n≤10），即所要构造的螺旋方阵的阶数。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个n阶的螺旋方阵，方阵中的数字用一个空格隔开，具体形式请参考输出样例。每组运算结果与其后一组运算结果之间有一个空行，最后一组运算结果之后没有空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2 3 4 5 6 7 8 9
+32 33 34 35 36 37 38 39 10
+31 56 57 58 59 60 61 40 11
+30 55 72 73 74 75 62 41 12
+29 54 71 80 81 76 63 42 13
+28 53 70 79 78 77 64 43 14
+27 52 69 68 67 66 65 44 15
+26 51 50 49 48 47 46 45 16
+25 24 23 22 21 20 19 18 17
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2 3 4
+12 13 14 5
+11 16 15 6
+10 9 8 7
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2 3 4 5
+16 17 18 19 6
+15 24 25 20 7
+14 23 22 21 8
+13 12 11 10 9
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2 3 4 5 6 7
+24 25 26 27 28 29 8
+23 40 41 42 43 30 9
+22 39 48 49 44 31 10
+21 38 47 46 45 32 11
+20 37 36 35 34 33 12
+19 18 17 16 15 14 13
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2 3 4 5 6 7 8 9 10
+36 37 38 39 40 41 42 43 44 11
+35 64 65 66 67 68 69 70 45 12
+34 63 84 85 86 87 88 71 46 13
+33 62 83 96 97 98 89 72 47 14
+32 61 82 95 100 99 90 73 48 15
+31 60 81 94 93 92 91 74 49 16
+30 59 80 79 78 77 76 75 50 17
+29 58 57 56 55 54 53 52 51 18
+28 27 26 25 24 23 22 21 20 19
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="009">#include&lt;stdio.h&gt;  //
+int r;
+void fun(int n)     //
+{
+    int num=n*n;  //
+    int i,j=0;  //
+    int point=0;  //
+    int round=0;  //
+    int key=1;  //
+    
+
+    int **a=new int *[n];  //
+    for(i=0;i&lt;n;i++)      //
+        a[i]=new int [n];  //
+    i=0;  //
+
+    while(key&lt;=num)    //
+    {
+        a[i][j]=key++;   //
+        if(point%4==0)   //
+        {
+            if(j&lt;n-1-round)  //
+                j++;  //
+            else if(j==n-1-round)   //
+            {
+                i++;  //
+                point++;  //
+            }
+        }
+        else if(point%4==1)  //
+        {
+            if(i&lt;n-1-round)  //
+                i++;  //
+            else if(i==n-1-round)  //
+            {
+                j--;  //
+                point++;  //
+            }
+        }
+        else if(point%4==2)  //
+        {
+            if(j&gt;round)  //
+                j--;  //
+            else if(j==round)  //
+            {
+                i--;  //
+                point++;  //
+            }
+        }
+        else if(point%4==3)  //
+        {
+            if(i&gt;round+1)  //
+                i--;  //
+            else if(i==round+1)  //[11]
+            {
+                j++;  //
+                point++;  //
+                round++;  //
+            }
+        }
+        
+    }
+    if(r!=0) printf("\n"); 
+    for(i=0;i&lt;n;i++)   //
+    {
+        for(j=0;j&lt;n-1;j++)  //
+            //printf("%-3d",a[i][j]);   //
+			printf("%d ",a[i][j]);   
+        printf("%d\n",a[i][j]);  //
+    }
+    
+    for(i=0;i&lt;n;i++)  //
+        delete []a[i];  //
+    delete []a;   //  
+}
+
+int main()  //
+{ 
+    int n;  //
+    r=0;
+    while ( scanf( "%d" , &amp;n ) == 1 )   //
+    {
+    	fun(n);  //
+	r++;
+    }
+return 0;  //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 10 阵列</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明在上学的时候，参加数学兴趣班。在班上，老师介绍了一种非常有趣的阵列。该阵列由n个正整数构成，阵列中的数字从1开始递增，数字的排序规则是从1开始由中间逆时针向外转出，2出现在1的下面，然后直至输出n为止。&lt;BR&gt;
+&lt;BR&gt;
+例如当n=5的时候，阵列如下：&lt;BR&gt;
+
+&lt;PRE&gt;
+  5
+1 4
+2 3
+&lt;/PRE&gt;
+
+当n=9时，阵列如下：&lt;BR&gt;
+&lt;PRE&gt;
+7 6 5
+8 1 4
+9 2 3
+&lt;/PRE&gt;
+
+当n=10时，阵列如下：&lt;BR&gt;
+&lt;PRE&gt;
+ 7 6 5
+ 8 1 4
+ 9 2 3
+10
+&lt;/PRE&gt;
+明明回家后想自己动手构造这样的阵列。他从n=1开始构造，但是他发现当n越来越大时，阵列的复杂性就越高，然后构造出来的阵列就越容易出错。为了降低构造阵列的出错率，提高构造速度，明明就求助于你，请你帮他写一个程序，来构造这样的阵列。&lt;BR&gt;
+&lt;BR&gt;
+明明的问题可以归结为：给你一个正整数n，请你按题目描述中所述的方法，构造出阵列。&lt;BR&gt;
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅有一个正整数n（1≤n≤99），即所要构造的阵列的大小。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个大小为n的阵列，阵列中的数字用一个空格隔开，具体形式请参考输出样例：&lt;BR&gt;&lt;BR&gt;
+
+当n为个位数时，输出的每个数占1位，当n为两位数时，两位数所在的列输出的每个数占2位。&lt;BR&gt;
+
+
+&lt;BR&gt;每组运算结果与其后一组运算结果之间有一个空行，最后一组运算结果之后没有任何空行。&lt;BR&gt;
+&lt;BR&gt;
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">  5
+1 4
+2 3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">7 6 5
+8 1 4
+9 2 3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">45
+</TestInput>
+                    <TestOutput xml:space="preserve">43 42 41 40 39 38 37
+44 21 20 19 18 17 36
+45 22  7  6  5 16 35
+   23  8  1  4 15 34
+   24  9  2  3 14 33
+   25 10 11 12 13 32
+   26 27 28 29 30 31
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">80
+</TestInput>
+                    <TestOutput xml:space="preserve">73 72 71 70 69 68 67 66 65
+74 43 42 41 40 39 38 37 64
+75 44 21 20 19 18 17 36 63
+76 45 22  7  6  5 16 35 62
+77 46 23  8  1  4 15 34 61
+78 47 24  9  2  3 14 33 60
+79 48 25 10 11 12 13 32 59
+80 49 26 27 28 29 30 31 58
+   50 51 52 53 54 55 56 57
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">99
+</TestInput>
+                    <TestOutput xml:space="preserve">73 72 71 70 69 68 67 66 65
+74 43 42 41 40 39 38 37 64 99
+75 44 21 20 19 18 17 36 63 98
+76 45 22  7  6  5 16 35 62 97
+77 46 23  8  1  4 15 34 61 96
+78 47 24  9  2  3 14 33 60 95
+79 48 25 10 11 12 13 32 59 94
+80 49 26 27 28 29 30 31 58 93
+81 50 51 52 53 54 55 56 57 92
+82 83 84 85 86 87 88 89 90 91
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">11
+</TestInput>
+                    <TestOutput xml:space="preserve"> 7  6 5
+ 8  1 4
+ 9  2 3
+10 11
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve"> 7 6 5
+ 8 1 4
+ 9 2 3
+10
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="010">#include &lt;iostream&gt;//
+#include &lt;cstring&gt;//
+
+using namespace std;//
+
+const int MAX_N = 100;//
+const int M_SIZE = 10;//
+const int DOWN = 0;//
+const int RIGHT = 1;//
+const int UP = 2;//
+const int LEFT = 3;//
+
+struct XY {//
+    int row; //
+    int col; //
+};
+
+int g_cnt; //
+XY g_pos[MAX_N];//
+int g_bound[4];//
+int g_matrix[M_SIZE][M_SIZE];//
+
+int turnLeft(int dir) {//
+    return (dir + 1) % 4; //
+}
+
+void go(int dir, XY* pos, int stepCnt) {//
+    for (int i = 0; i &lt; stepCnt; i++) {//
+        *pos = *(pos - 1);//
+        switch (dir) {//
+            case DOWN: //
+                pos-&gt;row++;//
+                if (pos-&gt;row &gt; g_bound[DOWN]) {//
+                    g_bound[DOWN] = pos-&gt;row;//
+                }
+                break;//
+            case RIGHT: //
+                pos-&gt;col++;//
+                if (pos-&gt;col &gt; g_bound[RIGHT]) {//
+                    g_bound[RIGHT] = pos-&gt;col;//
+                }
+                break;//
+            case UP: //
+                pos-&gt;row--;//
+                if (pos-&gt;row &lt; g_bound[UP]) {//
+                    g_bound[UP] = pos-&gt;row;//
+                }
+                break;//
+            case LEFT: //
+                pos-&gt;col--;//
+                if (pos-&gt;col &lt; g_bound[LEFT]) {//
+                    g_bound[LEFT] = pos-&gt;col;//
+                }
+                break;//
+        }
+        pos++;//
+    }
+}
+
+void traversal() {//
+    g_pos[0].row = 0;//
+    g_pos[0].col = 0;//
+    memset(g_bound, 0, sizeof(g_bound));//
+    int dir = DOWN; //
+    int stepCnt = 1; //
+    int num = 1; //
+    for (int i = 0; num &lt; g_cnt; i++) {//
+        int step = g_cnt - num &lt; stepCnt? g_cnt - num: stepCnt;//
+        go(dir, &amp;g_pos[num], step);//
+        num += step; //
+        dir = turnLeft(dir);//
+        if (i % 2 == 1) {//
+            stepCnt++;//
+        }
+    }
+}
+
+void solve () {//
+    traversal();//
+    memset(g_matrix, 0, sizeof(g_matrix));//
+    for (int i = 0; i &lt; g_cnt; i++) {//
+        int row = g_pos[i].row - g_bound[UP];//
+        int col = g_pos[i].col - g_bound[LEFT];//
+        g_matrix[row][col] = i + 1;//
+    }
+    g_bound[RIGHT] = g_bound[RIGHT] - g_bound[LEFT];//
+    g_bound[DOWN] = g_bound[DOWN] - g_bound[UP];//
+}
+
+void output() {//
+    int wid[M_SIZE],i,j;//
+    for (i = 0; i &lt;= g_bound[RIGHT]; i++) {//
+        wid[i] = 1;//
+        for (j = 0; j &lt;= g_bound[DOWN] ;j++) {//
+            if (g_matrix[j][i] &gt;= 100) {//
+                wid[i] = wid[i] &lt; 3? 3: wid[i];//
+            }
+            else if (g_matrix[j][i] &gt;= 10) {//
+                wid[i] = wid[i] &lt; 2? 2: wid[i];//
+            }
+        }
+    }
+    
+    int end[M_SIZE];//
+    for (i = 0; i &lt;= g_bound[DOWN]; i++) {//
+        end[i] = g_bound[RIGHT];//
+        for (j = g_bound[RIGHT]; j &gt;= 0; j--) {//
+            if (g_matrix[i][j] &gt; 0) {//
+                end[i] = j;//
+                break;//
+            }
+        }
+    }
+    
+    for (i = 0; i &lt;= g_bound[DOWN]; i++) {//
+        for (j = 0; j &lt;= end[i]; j++) {//
+            cout.width(wid[j]);//]
+            if (g_matrix[i][j] &gt; 0) {//
+                cout &lt;&lt; g_matrix[i][j];//
+            }
+            else {//
+                cout &lt;&lt; ' ';//
+            }
+            if (j &lt; end[i]) {//
+                cout &lt;&lt; ' ';//
+            }
+        }
+        cout &lt;&lt; endl;//
+    }
+}
+
+int main() {//
+    int r=0;
+    while (cin &gt;&gt; g_cnt) {//
+        solve();//
+	 if(r!=0) cout&lt;&lt;endl;
+        output();//
+	r++;
+    }
+    return 0; //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 11 翻译字符串</Title>
+            <Author>程裕强</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">       在现代战争中，情报战越来越显示出它的重要性，敌我双方都想方设法得到对方的情报，然后一举歼灭对方。然而，随着加密技术的出现，对情报进行加密变得越来越频繁，想破解敌方的情报也越来越难。明明是一名富有经验的情报工作人员，他的主要任务就是破解敌方的情报，从而得到对己方有利的信息。在一次破解情报任务中，明明再次成功地破解了敌方的情报。明明的破解方法如下：一串以‘@’为结束标志的字符串，从左至右对其进行翻译，若字符串中当前字符是整数n（0≤n≤9），则表示将后一个字符重复n+1次，不论后一个字符是否为数字，且后一个字符无需再次翻译；若当前字符非数字，则表示自己，无需翻译，直接输出即可。最后，输出翻译完的字符串。 &lt;BR&gt;&lt;BR&gt;
+	
+       例如字符串为：2d352d@，因为第一个字符为数字2，则将后一个字符d输出3次，而d则不需再翻译，然后翻译3，3也是一个数字，则将后一个字符5输出4次，而5则不需再翻译，然后翻译2，2也是一个数字，将后一个字符d输出3次，而d则不需再翻译，最后一个字符为@，表示自己，直接输出即可，最后的输出为：ddd 555 5dd d@；（注：在翻译时，‘@’当作字符处理。）&lt;BR&gt;&lt;BR&gt;
+	
+        这样翻译字符串的方法虽然简单，但是由于敌方的文件巨大，仅仅靠手工翻译是很难在短时间内完成的。于是明明就求助于你这位程序专家，按照明明提供的破译方法写一个程序，帮助明明快速把敌方文件翻译完成。&lt;BR&gt;&lt;BR&gt;
+
+        明明的问题可以归结为：按照文中提供的破译情报的方法，对字符串进行翻译，然后输出翻译后的字符串。</Description>
+                <InputSpec xml:space="preserve">       你写的程序要求从标准输入设备（通常，键盘为标准输入设备）中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行包含一个以‘@’为结束标志的字符串，字符串由数字、小写字母以及‘@’组成，中间不包含空格，字符串长度不大于10。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">       对于每一组测试数据你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备（通常，显示屏为标准输出设备）中。每组运算结果为经过翻译的字符串，字符串中的字符以三个为一组输出，每组字符之间用一个空格隔开。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。
+	</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2d352d@
+</TestInput>
+                    <TestOutput xml:space="preserve">ddd 555 5dd d@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">dsegweg@
+</TestInput>
+                    <TestOutput xml:space="preserve">dse gwe g@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">12345@
+</TestInput>
+                    <TestOutput xml:space="preserve">224 444 @@@ @@@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1a2b3c4d@
+</TestInput>
+                    <TestOutput xml:space="preserve">aab bbc ccc ddd dd@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">aabbccdd@
+</TestInput>
+                    <TestOutput xml:space="preserve">aab bcc dd@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">a1b2c3d4@
+</TestInput>
+                    <TestOutput xml:space="preserve">abb ccc ddd d@@ @@@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">a@
+</TestInput>
+                    <TestOutput xml:space="preserve">a@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">@
+</TestInput>
+                    <TestOutput xml:space="preserve">@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4@
+</TestInput>
+                    <TestOutput xml:space="preserve">@@@ @@
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">iloveyou@
+</TestInput>
+                    <TestOutput xml:space="preserve">ilo vey ou@
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="011">#include &lt;iostream&gt;//
+#include &lt;cctype&gt;//
+
+using namespace std;//
+
+int g_cnt; //
+
+void put(char ch) {//
+    if ((g_cnt%3)==0 &amp;&amp; g_cnt!=0) {//
+        cout &lt;&lt; ' ';//
+    }
+    cout &lt;&lt; ch;//
+    g_cnt++;//
+    
+}
+
+int main() {//
+    char ch; //
+    g_cnt = 0;
+    while (cin &gt;&gt; ch) {//
+         //
+        if (isdigit(ch)) {//
+            int t = ch - '0' + 1; //
+            cin &gt;&gt; ch;//
+            for (int i = 0; i &lt; t; i++) {//
+                put(ch);//
+            }
+        }
+        else {
+            put(ch);//
+        }
+        if (ch == '@') {//
+            cout &lt;&lt; endl;//
+            g_cnt = 0;
+        }
+    }
+    return 0; //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 12 T的倍数N</Title>
+            <Author>程裕强</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">       明明学习数学已经有很多年了，对各种各样的数学问题都有研究。有一天，明明的爸爸问明明说：“明明，你觉得你对数字敏感吗？”明明毫不犹豫地回答：“那当然，非常敏感。”于是明明的爸爸就说：“好，那我问你一个问题，如果有一个个位数为7的自然数N，把它的个位数移到最高位，其余各位均右移一位（如127变成712），要求这样得到的一个新的数是原数的T倍。若我现在把自然数T告诉你，你能求出最小的符合条件的自然数N吗？”&lt;BR&gt;&lt;BR&gt;
+	
+       明明觉得这个问题很简单，只要按从小到大的顺序把所有是7结尾的自然数找出来，然后交换位置，再除一下，看看倍数是不是T倍就可以了。明明回答爸爸说：“这个问题很简单，来考我吧。”于是明明的爸爸就给了明明一个数字2，让他开始动手寻找。但是，使明明意想不到的是，他找了很久很久，始终没有找到想要的那个数，而当他到查到1000007时，需要的那个数还是没有出现，于是就放弃了。他觉得靠手工查找的话，是无法快速找到的。因此，明明求助于你，请你帮他写一个程序，来解决这个相当棘手的问题。但是他也给了你另外一个条件，如果找到超过1000000时还是没有找到需要的那个数的话，就停止寻找。&lt;BR&gt;&lt;BR&gt;
+
+       明明的问题可以归结为：对于一个个位数为7的自然数N，把它的个位数移到最高位，其余各位均右移一位，要求这样得到的一个新的数是原数的T倍。现给出这个自然数T，求满足这个要求的最小的自然数N。若在[1, 1000000] 的范围内没有找到N，则输出“No”。 </Description>
+                <InputSpec xml:space="preserve">       你写的程序要求从标准输入设备（通常，键盘为标准输入设备）中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅有一个自然数T（1≤T≤9）。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">       对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备（通常，显示屏为标准输出设备）中。每组运算结果输出一个自然数N或“No”，不包括双引号。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">142857
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">No
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">7
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">No
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">179487
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">No
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">No
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8
+</TestInput>
+                    <TestOutput xml:space="preserve">No
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">No
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="012">#include &lt;iostream&gt;//
+
+using namespace std;//
+
+int main() {//
+    int mul; //
+    while (cin &gt;&gt; mul) {//
+        int find = false; //
+        for (int i = 1; i &lt;= 100000; i *= 10) {//
+            int  temp = (i - mul) * 7; //
+            int div = 10 * mul - 1; //
+            if (temp % div == 0) {//
+                int x = temp / div; //
+                if (x == 0 &amp;&amp; i == 1 || 10 * x &gt;= i) {//
+                    cout &lt;&lt; 10 * x + 7 &lt;&lt; endl;//
+                    find = true; //
+                    break;//
+                }
+            }
+        }
+        if (!find) {//
+            cout &lt;&lt; "No" &lt;&lt; endl;//
+        }
+    }
+    return 0; //
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

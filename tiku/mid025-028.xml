@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFHCr0gwSqhOeK92M71MnRgV8mZB3AhR+45oGavhVfjuA60Plf53bU+9oqg==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 25 奇妙的比值</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明喜欢钻研各种各样的数学问题。一天，明明对数的因子产生了兴趣，他想把一个数的所有因子都找出来，然后把它们相加再去除以这个数，这样会得到一个比值。明明想看看不同的数的该比值会有什么不同，以便做研究。例如6这个数，它一共有4个因子，分别是：1、2、3、6，把他们相加然后再除以6，即1+2+3+6=12，12/6=2，就可以得到2这个比值。明明为了研究，需要得到大量的比值，但是如果通过手动计算比值的话需要花大量的时间，于是明明就想请你帮忙，帮他写一个程序，能够求数的比值。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个数，求所有因子和，把这些因子相加，然后再除以这个数，求得比值。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（1≤n≤120），代表所求比值的那个数。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个浮点数，就是所求的比值，保留2位小数。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。（注：最后求得的比值保留2位小数。）&lt;BR&gt;&lt;BR&gt;
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">2.00
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">12
+</TestInput>
+                    <TestOutput xml:space="preserve">2.33
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">24
+</TestInput>
+                    <TestOutput xml:space="preserve">2.50
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">36
+</TestInput>
+                    <TestOutput xml:space="preserve">2.53
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">48
+</TestInput>
+                    <TestOutput xml:space="preserve">2.58
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">60
+</TestInput>
+                    <TestOutput xml:space="preserve">2.80
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">120
+</TestInput>
+                    <TestOutput xml:space="preserve">3.00
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="025">#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#define MAXN 120
+using namespace std;
+
+int main()
+{
+    int i,j,k,sum,num,den,n;
+    double p[121];
+    num=0;
+    den=1;
+    n=0;
+    for(i=6;i&lt;=MAXN;i++)
+    {
+        sum=0;
+        k=(int)sqrt(1.0*i);
+        for(j=1;j&lt;=k;j++)
+        {
+            if(i%j==0)
+            {
+                sum=sum+j+i/j;
+            }
+        }
+        if(k*k==i)
+        {
+            sum=sum-k;
+        }
+        if(sum*den&gt;i*num)
+        {
+            p[i] = 1.0*sum/i;
+            num=sum;
+            den=i;
+        }
+    }
+    while(cin&gt;&gt;n)
+    {
+        printf("%.2f\n",p[n]);
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 26 菱形输出</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明这次又碰到问题了：&lt;BR&gt;&lt;BR&gt;
+
+给定一个正整数N，明明的爸爸让他输出一个以Z开始的菱形，以后依次为Y，X…，比如当N等于1的时候输出图形：&lt;BR&gt;
+&lt;PRE&gt;Z&lt;/PRE&gt;
+当N等于2的时候，输出图形：（Y前没有空格，Z、X和W前一个空格）&lt;BR&gt;
+&lt;PRE&gt; Z
+Y X
+ W&lt;/PRE&gt;
+当N等于3的时候，输出图形：&lt;BR&gt;
+&lt;PRE&gt;  Z
+ Y X
+W   V
+ U T
+  S&lt;/PRE&gt;
+&lt;BR&gt;
+明明发现当N很大的时候就不是很容易了，所以找到了你，希望你编写一个程序帮助他&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：输入一个正整数N，输出一个以Z开始的菱形，以后依次为Y，X…。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅包括一个正整数n（1≤n≤7）。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。
+</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组输出一个以Z开始的菱形，具体格式参照样例输出。每组运算结果与其后一组运算结果之间有一个空行，最后一组运算结果之后没有空行。&lt;BR&gt;&lt;BR&gt;
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">Z
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve"> Z
+Y X
+ W
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">  Z
+ Y X
+W   V
+ U T
+  S
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">   Z
+  Y X
+ W   V
+U     T
+ S   R
+  Q P
+   O
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">    Z
+   Y X
+  W   V
+ U     T
+S       R
+ Q     P
+  O   N
+   M L
+    K
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">      Z
+     Y X
+    W   V
+   U     T
+  S       R
+ Q         P
+O           N
+ M         L
+  K       J
+   I     H
+    G   F
+     E D
+      C
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="026">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	int n;
+	int r=0;
+	while(cin&gt;&gt;n){
+		if(r!=0) cout&lt;&lt;endl;
+		r++;
+		char a='Z';
+		for(int j=n;j&gt;1;j--) cout&lt;&lt;" ";
+		cout&lt;&lt;a&lt;&lt;endl;
+		a--;
+		for(int i=n-1;i&gt;0;i--){
+			for(int j=i;j&gt;1;j--) cout&lt;&lt;" ";
+			cout&lt;&lt;a;
+			a--;
+			for(int j=0;j&lt;2*(n-i)-1;j++) cout&lt;&lt;" ";
+			cout&lt;&lt;a&lt;&lt;endl;
+			a--;
+		}
+		for(int i=2;i&lt;n;i++){
+			for(int j=i;j&gt;1;j--) cout&lt;&lt;" ";
+			cout&lt;&lt;a;
+			a--;
+			for(int j=0;j&lt;2*(n-i)-1;j++) cout&lt;&lt;" ";
+			cout&lt;&lt;a&lt;&lt;endl;
+			a--;
+		}
+		if(n!=1){
+			for(int j=n;j&gt;1;j--) cout&lt;&lt;" ";
+			cout&lt;&lt;a&lt;&lt;endl;
+		}
+	}
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 27 牧场安全系统</Title>
+            <Author>张志寿</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明是一家养牛场的老板，随着养牛场的规模扩大，牛的数量变得越来越多。因此，管理也就越来越难，还时常发生一些事故，比如：一些牛会走失，一些牛会因为疏忽照顾而生长不佳等等，这些都给明明造成了损失。于是，明明决定给养牛场安装一套现代化的生产管理系统，用科学的方法来管理养牛场，在这套安全系统中，需要为每头牛编一个号码，这个号码是唯一的，用来标识每一头牛。这样明明在管理时，就不会疏忽任意一头牛，也不会使牛再次走失。但是在给每头牛编号的时候，明明遇到了困难，由于系统的原因，系统对每头牛的编号有一定的限制，这个编号必须有L个小写字母组成，这些小写字母必须在固定的几个字母中选择，并且在这个编号中至少要有一个元音('a', 'e', 'i', 'o', 或者 'u')，至少有两个辅音(除去元音以外的音节), 并且字母按字母表顺序排列(例如，'abc'是有效的，而'bac'不是有效的)。&lt;BR&gt;&lt;BR&gt;
+
+例如：假设编号由5个小写字母组成，且这些小写字母只能为a、b、c、d、e、f，这样构成的可能的编号就有以下6种：&lt;BR&gt;
+bcdef&lt;BR&gt;
+acdef&lt;BR&gt;
+abdef&lt;BR&gt;
+abcef&lt;BR&gt;
+abcdf&lt;BR&gt;
+abcde&lt;BR&gt;
+&lt;BR&gt;
+明明觉得这样编号的方法非常麻烦，仅仅靠手工排列是很难完成的，出错的可能性很大，这时，明明想起了你，你是一位程序设计专家，你能否帮明明写一个程序，帮助他按照编号的规则，由程序生成所有的有效编号，供明明使用。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个有效编号的长度L，和C个可用的小写字母，按照编码规则生成所有的有效编号。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据有二行，第一行为两个整数L(3≤L≤15)和C(3≤C≤26)，L表示编号的长度，C表示可以选择的小写字母的数量，L和C用一个空格隔开。第二行有C个两两不相同的小写字母，相互以一个空格隔开。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果分为两个部分，第一部分为所有生成的有效编号，每行一个，按字母表逆序顺序输出，第二部分为一个整数，表示总共有多少个有效编码。
+每组运算结果的行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间有一个空行，最后一组运算结果后面没有空行。&lt;BR&gt;&lt;BR&gt;
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3 3
+a b c
+</TestInput>
+                    <TestOutput xml:space="preserve">abc
+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5 6
+a b c d e f
+</TestInput>
+                    <TestOutput xml:space="preserve">bcdef
+acdef
+abdef
+abcef
+abcdf
+abcde
+6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4 6
+a b c d e f
+</TestInput>
+                    <TestOutput xml:space="preserve">cdef
+bdef
+bcef
+bcde
+adef
+acef
+acdf
+acde
+abef
+abdf
+abde
+abcf
+abce
+abcd
+14
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">14 15
+a b c d e f g h i j k l m n o
+</TestInput>
+                    <TestOutput xml:space="preserve">bcdefghijklmno
+acdefghijklmno
+abdefghijklmno
+abcefghijklmno
+abcdfghijklmno
+abcdeghijklmno
+abcdefhijklmno
+abcdefgijklmno
+abcdefghjklmno
+abcdefghiklmno
+abcdefghijlmno
+abcdefghijkmno
+abcdefghijklno
+abcdefghijklmo
+abcdefghijklmn
+15
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">3 3
+b c d
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7 7
+a b c d e f g
+</TestInput>
+                    <TestOutput xml:space="preserve">abcdefg
+1
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="027">#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;memory&gt;
+#define MAXL 15
+#define MAXC 26
+using namespace std;
+
+char data[MAXC+1],ans[MAXL+1];
+bool used[MAXC+1];
+int l,c,nv,nc,total;
+
+int compare(const void *a,const void *b)
+{
+    return *(char*)b - *(char*)a;
+}
+
+bool isvowel(char ch)
+{
+    if((ch=='a')||(ch=='e')||(ch=='i')||(ch=='o')||(ch=='u'))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void backtrack(int k)
+{
+    int i;
+    if(k==l)
+    {
+        if((nv&gt;=1)&amp;&amp;(nc&gt;=2))
+        {
+            total++;
+            ans[l]='\0';
+            printf("%s\n",ans);
+        }
+        return;
+    }
+    for(i=0;i&lt;c;i++)
+    {
+        if((k==0)||((used[i]==false)&amp;&amp;(ans[k-1]&lt;data[i])))
+        {
+            ans[k]=data[i];
+            if(isvowel(data[i])==true)
+            {
+                nv++;
+            }
+            else
+            {
+                nc++;
+            }
+            used[i]=true;
+            backtrack(k+1);
+            used[i]=false;
+            if(isvowel(data[i])==true)
+            {
+                nv--;
+            }
+            else
+            {
+                nc--;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int i;
+    int r=0;
+    while(scanf("%d %d",&amp;l,&amp;c)!=EOF)
+    {
+	if(r!=0) printf("\n");
+	r++;
+        for(i=0;i&lt;c;i++)
+        {
+            scanf(" %c",&amp;data[i]);
+        }
+        if(l&gt;c)
+        {
+            printf("0\n");
+            continue;
+        }
+        qsort(data,c,sizeof(char),compare);
+        total=0;
+        memset(used,0,sizeof(used));
+        backtrack(0);
+        printf("%d\n",total);
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 28 小数</Title>
+            <Author>张志寿</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明最近在一家软件公司实习，公司分配给他一个任务，要他写一个小程序，这个程序的功能是求出一个浮点数的小数部分的长度。例如程序输入1.1，则输出1，程序输入1.11，则输出2，明明觉得这个非常简单，花了不到5分钟的时间就把程序给写出来了，然后就把程序交给了测试员测试。但是没有想到的是，经过测试员的测试，发现了一大堆的错误，返回的结果很多都是不对的，这个令明明相当的不解，始终想不通自己的程序错在哪里。你是一名经验丰富的程序员，明明把这个问题来求助于你，明明和你说了他的想法，你一听就明白明明错在了哪里，原来明明使用double型来存放浮点数，但是由于double型的精度问题，不可能把所有的小数都精确的保存好，如果小数位数很长，就会出错。你发现了问题。现在请你写出正确的程序。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个浮点数，请你求出这个浮点数的小数位数。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅包括一个浮点数数n，n的长度不超过100。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个整数，即n的小数部分的位数。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1.1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1.11
+</TestInput>
+                    <TestOutput xml:space="preserve">2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">245452454545364565.3454353
+</TestInput>
+                    <TestOutput xml:space="preserve">7
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1684651354687461
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">0.2154654889465416516549879844654531321246545689798797546513132564587987
+</TestInput>
+                    <TestOutput xml:space="preserve">70
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">162315649.21624876168465169846516519
+</TestInput>
+                    <TestOutput xml:space="preserve">26
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">215689.2156548546516213215466548785462132135165468
+</TestInput>
+                    <TestOutput xml:space="preserve">43
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">32668.45354
+</TestInput>
+                    <TestOutput xml:space="preserve">5
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">34563487579645356363256467485475674567.1234
+</TestInput>
+                    <TestOutput xml:space="preserve">4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2442244.2442424
+</TestInput>
+                    <TestOutput xml:space="preserve">7
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="028">#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#define MAXL 1000000
+using namespace std;
+
+char line[MAXL+1],*p;
+
+int main()
+{
+    int len;
+    while(gets(line)!=NULL)
+    {
+        p=strchr(line,'.');
+        if(p!=NULL)
+        {
+            len=strlen(line);
+            printf("%d\n",len-(p-line)-1);
+        }
+        else
+        {
+            printf("0\n");
+        }
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

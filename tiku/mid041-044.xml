@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFEIHOH6enQnVKHSyMRzZGJK7RIK1AhRi5cmYI55aZgiZc6KQYYGz5dPtJQ==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 41 约瑟夫环</Title>
+            <Author>ZhouMingLiang</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">有一次，明明的公司举行忘年会。忘年会的高潮部分是最后的抽大奖环节。公司为了增加活动的气氛，并没有按传统的抽奖方式来抽，而是进行了一个游戏：逐步逐步地淘汰人，而最后剩下的人，将会得到大奖。这个游戏的方式如下：首先公司的全部职员围成一个圈，然后确定一个淘汰数X，接着就从其中的一个人开始，从1数数，当数到X时，那个人就被淘汰出局，接着下一个人再从1开始数数，一直这样重复下去，直到剩下最后一个人，那个人就是最后的大奖得主。&lt;BR&gt;&lt;BR&gt;
+
+例如，公司有5个人，淘汰数定为2，则一开始五个人排成一圈，依次编号为：1、2、3、4、5；&lt;BR&gt;
+首先从编号1的人开始数数，数到2后，编号2淘汰，这样只剩下4个人：1、3、4、5；&lt;BR&gt;
+接着从编号3的人开始数，数到2后，编号4淘汰，这样只剩下3个人：1，3、5；&lt;BR&gt;
+接着从编号5的人开始数，数到2后，编号1淘汰，这样只剩下2个人：3、5；&lt;BR&gt;
+最后从编号为5的人开始数，数到2后，编号5淘汰，最后编号为3的那个人就获得了最终的大奖。&lt;BR&gt;
+（注：以上的淘汰顺序为2 4 1 5 3。）&lt;BR&gt;&lt;BR&gt;
+
+由于明明的运气十分地差，最后第二个被淘汰，与大奖失之交臂，十分郁闷。他想知道自己被淘汰的全过程，于是他想请你帮个忙，帮他写一个程序，明明把他公司的人数告诉你，并且把那个淘汰数也告诉你，你的程序能够根据这两个数计算出淘汰人的具体顺序，即把淘汰人的编号按顺序输出。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个公司的人数N和一个淘汰数X，你的程序模拟上面描述的淘汰方式，输出淘汰人的编号顺序。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅一行，每组测试数据有两个整数N（1&amp;lt;N&amp;lt;100）和X（0&amp;lt;X&amp;lt;10），N表示公司的人数，X表示淘汰数，两个整数用一个空格隔开。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为N个整数，即淘汰人的编号的顺序，每个数之间用一个空格隔开。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4 1
+</TestInput>
+                    <TestOutput xml:space="preserve">1 2 3 4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5 2
+</TestInput>
+                    <TestOutput xml:space="preserve">2 4 1 5 3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10 3
+</TestInput>
+                    <TestOutput xml:space="preserve">3 6 9 2 7 1 8 5 10 4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">99 9
+</TestInput>
+                    <TestOutput xml:space="preserve">9 18 27 36 45 54 63 72 81 90 99 10 20 30 40 50 60 70 80 91 2 13 24 35 47 58 69 82 93 5 17 31 43 56 68 83 95 8 23 38 52 66 79 96 12 28 44 61 76 92 11 29 48 65 85 3 22 42 64 86 6 32 53 75 98 25 51 77 4 34 62 89 21 57 88 26 67 1 41 84 33 74 19 78 39 97 59 37 14 94 87 7 16 55 46 49 15 71 73
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">78 6
+</TestInput>
+                    <TestOutput xml:space="preserve">6 12 18 24 30 36 42 48 54 60 66 72 78 7 14 21 28 35 43 50 57 64 71 1 9 17 26 34 44 52 61 69 77 10 20 31 40 51 62 73 4 16 29 41 55 67 2 15 32 46 59 75 13 33 49 68 8 27 53 74 22 45 70 23 56 5 39 3 47 19 65 58 38 63 11 76 37 25
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">44 3
+</TestInput>
+                    <TestOutput xml:space="preserve">3 6 9 12 15 18 21 24 27 30 33 36 39 42 1 5 10 14 19 23 28 32 37 41 2 8 16 22 29 35 43 7 17 26 38 4 20 34 11 31 13 44 25 40
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="041">#include&lt;iostream&gt;   //
+#include&lt;cstring&gt;   //
+
+using namespace std;   //
+
+#define  N 1001   //
+
+int num[N] , n ,m;   //
+
+int getnext(int p)   //
+{
+	while(num[(p+1)%n] == 1)   //
+		p++;   //
+	return (p+1)%n;   //
+}
+
+void slv()   //
+{
+	int i , p ,tm,drop;   //
+	for (i = 0; i &lt;= n; i++)   //
+		num[i] = 0;   //
+	p = 1;   //
+	for (i = 0 ; i &lt; n; i++)    //
+	{
+		tm = m;   //
+		while(tm--)   //
+		{
+			drop = p;   //
+			p = getnext(drop);   //
+		}
+		num[drop]  = 1;   //
+		if (drop == 0)   //
+			drop = n;   //
+		if ( i == n-1)   //
+		cout&lt;&lt;drop&lt;&lt;endl;   //
+		else
+		cout&lt;&lt;drop&lt;&lt;" ";   //
+	}
+}
+
+int main()   //
+{
+	while(cin&gt;&gt;n&gt;&gt;m)   //
+		slv();   //
+	return 0;   //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 42 约瑟夫环2</Title>
+            <Author>SunCiHai</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明是一名公安局的谈判专家，专门负责和绑匪谈判。有一次，明明接到一个特殊的任务，他赶到了案发现场，发现有k个绑匪绑架了k个人质，于是明明就开始和绑匪进行谈判。绑匪提出了一个非常特殊的要求，如果明明能够回答出这个问题，那绑匪将释放所有的人质；否则，绑匪就要撕票。
+&lt;BR&gt;&lt;BR&gt;
+绑匪的问题是这样：绑匪把人质和自己围成一个圈，把人质从1开始编号，一直编到k，然后绑匪自己从k+1开始编号，一直编到2k。现在从编号1开始，每次从其中选出第m个人（隔m-1选出一个人）出列，然后绑匪要求明明选定这个m值，且m值要尽量的小，使得最先出列的k个人都是绑匪。
+&lt;BR&gt;&lt;BR&gt;
+例如：有3个坏人和3个人质，他们排成一圈，其中编号1到3的为人质，编号4到6的为坏人，如下：&lt;BR&gt;
+1、2、3、4、5、6；&lt;BR&gt;
+明明要选定m=5时，能够满足绑匪的要求。因为：&lt;BR&gt;
+第一轮，从1开始数，编号5出列，剩下的人为：&lt;BR&gt;
+1、2、3、4、6；&lt;BR&gt;
+第二轮，从6开始数，编号4出列，剩下的人为：&lt;BR&gt;
+1、2、3、6；&lt;BR&gt;
+第三轮，从6开始数，编号6出列，剩下的人为：&lt;BR&gt;
+1、2、3；&lt;BR&gt;
+这样所有的绑匪都先出列，明明可以成功地救出所有的人质。&lt;BR&gt;&lt;BR&gt;
+
+如果明明能够找到这个m值，那么所有的人质都想获救，否则的话，后果不堪设想。明明意识到了问题的严重，这个问题对他来说十分地棘手。于是明明想到了你，你是一名程序设计专家，明明想让你用程序来解这个问题，救出所有的人质。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：假设有k个人质和k个绑匪围成一圈。人质的编号从1到k，绑匪的编号从k+1到2k。从编号1开始，每次从其中选出第m个人(隔m-1选出一人)出列。希望求出m的最小值，使得最先出列的k个人都是绑匪，即都是编号从k+1到2k的人。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅一行，每组测试数据有一个整数k（1≤k≤10），表示人质的人数和绑匪的人数。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个整数m，即明明要选定的那个数。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">7
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">5
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">30
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">169
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">441
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">1872
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8
+</TestInput>
+                    <TestOutput xml:space="preserve">7632
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">1740
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">93313
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="042">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	int n;
+	while(cin&gt;&gt;n){
+		int k;
+		for(k=n+1;;k++){
+			bool find=true;
+			int s=0;
+			for(int i=2*n;i&gt;n;i--){
+				s=(s+k%i)%i;
+				if(s&lt;=n&amp;&amp;s!=0){
+					find=false;
+					break;
+				}
+				s--;
+				if(s&lt;0) s+=i;
+			}
+			if(find) break;
+		}
+		cout&lt;&lt;k&lt;&lt;endl;
+	}
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 43 求字符串的起始位置</Title>
+            <Author>SunCiHai</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">在程序设计中，对字符串的处理是经常遇到的一个问题。例如，将字符串中所有的英文字母变成大写，或者将一个字符串与另一个字符串连接构成一个新的字符串。由于此类的操作非常普遍，因此，在设计程序语言的时候，设计者就已经把这类操作的代码写好了，如果编程人员要使用这些代码，只需把该类代码的头文件包含到自己的程序中，编程人员就可以很简单的调用，这样使编程节省了不少时间。&lt;BR&gt;
+明明是一名项目经理，他现在负责一种新的程序设计语言的开发，现在需要预先实现大量的和处理字符串有关的功能方法，以后这些方法会包含到程序设计语言中，方便程序语言使用者的开发。你是明明手下的一名软件工程师，明明分配给你一个任务，在两个字符串中，找到一个字符串在另一个字符串中的起始位置。&lt;BR&gt;&lt;BR&gt;
+
+例如，有两个字符串，一个字符串s= “abc”，另一个字符串subs=“bc”，现在就要找出“bc”在“abc”中的其实位置，在这个例子中，“bc”的起始位置为2。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：输入两串字符串s和subs，求s中subs的起始位置。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据两行，每组测试数据的第一行为字符串s，s的长度小于100，每组测试数据的第二行为字符串subs，subs的长度小于100，s和subs中仅包含小写字母和数字。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个整数m，即subs在s中的起始位置，如果在s中找不到subs这个子串，则m=0。每组运算结果单独形成一行数据，其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">abc
+bc
+</TestInput>
+                    <TestOutput xml:space="preserve">2
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">aaa
+bbb
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">asdfasdf
+df
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2346fh
+fgh
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">asdf
+f
+</TestInput>
+                    <TestOutput xml:space="preserve">4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">m,.bb
+bbb
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">23dv
+3v
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">asdfa23fdbqaea5hwertgaevg
+sdfgbnq34t
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">wer34h6678n45y345gyae
+ae
+</TestInput>
+                    <TestOutput xml:space="preserve">20
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">adfgaw4h5w346naetghbaegsdtgsdfyhnry8,indryt
+bae
+</TestInput>
+                    <TestOutput xml:space="preserve">20
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="043">#include&lt;iostream&gt;    //
+#include&lt;cstring&gt;   //
+
+using namespace std;   //
+
+char s[100];   //
+char subs[100];   //
+
+void slv()   //
+{
+	int i , l , len;   //
+	l = strlen(subs);   //
+	len = strlen(s);   //
+	for ( i = 0; i &lt; len; i++)    //
+		if (strncmp(&amp;s[i] , subs , l) == 0)   //
+		{
+			cout&lt;&lt;i+1&lt;&lt;endl;   //
+			return;   //
+		}
+	cout&lt;&lt;0&lt;&lt;endl;   //
+}
+
+int main()   //
+{
+	while(cin.getline(s,100))   //
+	{
+		cin.getline(subs,100);   //
+		slv();   //
+	}
+	return 0;   //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 44 字符串统计</Title>
+            <Author>SunCiHai</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明最近在做一个有关字符串的统计工作。两个由小写字母组成的字符串s1和s2，明明需要统计出以下四种关系：&lt;BR&gt;
+（1）在s1或s2中存在的字母（包括在s1和s2中都存在的字母）；&lt;BR&gt;
+（2）在s1中且在s2中的字母；&lt;BR&gt;
+（3）在s1中但不在s2中的字母，在s2中但不在s1中的字母；&lt;BR&gt;
+（4）不在s1中且也不在s2中的字母； &lt;BR&gt;&lt;BR&gt;
+
+例如两个字符串s1为“lkjsvoahs”，s2为“qglhskjdfg”：&lt;BR&gt;
+（1）在s1或者在s2或者s1、s2中都存在的字母：adfghjkloqsv；&lt;BR&gt;
+（2）在s1中且在s2中的字母：hjkls；&lt;BR&gt;
+（3）在s1中但不在s2中的字母，在s2中但不在s1中的字母：adfgoqv；&lt;BR&gt;
+（4）不在s1中且也不在s2中的字母：bceimnprtuwxyz；&lt;BR&gt;&lt;BR&gt;
+
+明明统计了很久，但是由于统计过程十分繁琐，且很容易出错，导致明明的进度非常慢，很有可能因为统计不完而错过了晚上的约会。因此明明想请你帮个忙，帮他写一个程序，用程序来统计出以上几项内容。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：输入两串由小写字母组成的字符串s1和s2，比较其中的字母，输出以下四项，输出的字母以字典顺序排列：&lt;BR&gt;
+（1）在s1或s2中存在的字母（包括在s1和s2中都存在的字母）；&lt;BR&gt;
+（2）在s1中且在s2中的字母；&lt;BR&gt;
+（3）在s1中但不在s2中的字母，在s2中但不在s1中的字母；&lt;BR&gt;
+（4）不在s1中且也不在s2中的字母； &lt;BR&gt;&lt;BR&gt;
+
+例如字符串s1为sadf，s2为asdf，则需输出以下四行（注意输出的格式）：&lt;BR&gt;
+in s1 or s2:adfs&lt;BR&gt;
+in s1 and s2:adfs&lt;BR&gt;
+in s1 but not in s2 ,or in s2 but not in s1:&lt;BR&gt;
+not in s1 and s2:bceghijklmnopqrtuvwxyz 
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据两行，每组测试数据的第一行为字符串s1，每组测试数据的第二行为字符串s2；s1和s2都由小写英文字母组成，且长度不超过26个字符。测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果由四行组成：&lt;BR&gt;
+第一行为在s1或者在s2或者s1、s2中都存在的字母；&lt;BR&gt;
+第二行为在s1中且在s2中的字母；&lt;BR&gt;
+第三行为在s1中但不在s2中的字母，在s2中但不在s1中的字母；&lt;BR&gt;
+第四行为不在s1中且也不在s2中的字母；&lt;BR&gt;
+具体格式请参考样例输出。&lt;BR&gt;
+每组运算结果其行首和行尾都没有任何空格，每组运算结果与其后一组运算结果之间有一个空行，最后一组运算结果后面没有空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="middle">
+</Seperator>
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">sadf
+asdf
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:adfs
+in s1 and s2:adfs
+in s1 but not in s2 ,or in s2 but not in s1:
+not in s1 and s2:bceghijklmnopqrtuvwxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">lkjsvoahs
+qglhskjdfg
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:adfghjkloqsv
+in s1 and s2:hjkls
+in s1 but not in s2 ,or in s2 but not in s1:adfgoqv
+not in s1 and s2:bceimnprtuwxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">lskjvdr
+sdfje
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:defjklrsv
+in s1 and s2:djs
+in s1 but not in s2 ,or in s2 but not in s1:efklrv
+not in s1 and s2:abcghimnopqtuwxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">jieiog
+hohw
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:eghijow
+in s1 and s2:o
+in s1 but not in s2 ,or in s2 but not in s1:eghijw
+not in s1 and s2:abcdfklmnpqrstuvxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">fgow
+goeq
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:efgoqw
+in s1 and s2:go
+in s1 but not in s2 ,or in s2 but not in s1:efqw
+not in s1 and s2:abcdhijklmnprstuvxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">sfbjqi
+fgowo
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:bfgijoqsw
+in s1 and s2:f
+in s1 but not in s2 ,or in s2 but not in s1:bgijoqsw
+not in s1 and s2:acdehklmnprtuvxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">ferhfv
+qwesdfg
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:defghqrsvw
+in s1 and s2:ef
+in s1 but not in s2 ,or in s2 but not in s1:dghqrsvw
+not in s1 and s2:abcijklmnoptuxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">qwekljdfvoj
+eriiigjigowjegojw
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:defgijkloqrvw
+in s1 and s2:ejow
+in s1 but not in s2 ,or in s2 but not in s1:dfgiklqrv
+not in s1 and s2:abchmnpstuxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">wrgdfg
+asdg
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:adfgrsw
+in s1 and s2:dg
+in s1 but not in s2 ,or in s2 but not in s1:afrsw
+not in s1 and s2:bcehijklmnopqtuvxyz
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">erwydfh
+vbmcvb
+</TestInput>
+                    <TestOutput xml:space="preserve">in s1 or s2:bcdefhmrvwy
+in s1 and s2:
+in s1 but not in s2 ,or in s2 but not in s1:bcdefhmrvwy
+not in s1 and s2:agijklnopqstuxz
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="044">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+	char s1[30],s2[30];
+	int r=0;
+	while(cin&gt;&gt;s1&gt;&gt;s2){
+		if(r!=0) cout&lt;&lt;endl;
+		r++;
+		int l1=strlen(s1);
+		int l2=strlen(s2);
+		bool b1[26]={false};
+		bool b2[26]={false};
+
+		for(int i=0;i&lt;l1;i++){
+			b1[s1[i]-'a']=true;
+		}
+		for(int i=0;i&lt;l2;i++){
+			b2[s2[i]-'a']=true;
+		}
+
+		cout&lt;&lt;"in s1 or s2:";
+		for(int i=0;i&lt;26;i++){
+			if(b1[i] || b2[i])
+			cout&lt;&lt;(char)(i+'a');
+		}
+		cout&lt;&lt;endl;
+
+		cout&lt;&lt;"in s1 and s2:";
+		for(int i=0;i&lt;26;i++){
+			if(b1[i] &amp;&amp; b2[i])
+			cout&lt;&lt;(char)(i+'a');
+		}
+		cout&lt;&lt;endl;
+
+		cout&lt;&lt;"in s1 but not in s2 ,or in s2 but not in s1:";
+		for(int i=0;i&lt;26;i++){
+			if(b1[i] &amp;&amp; !b2[i] || !b1[i] &amp;&amp; b2[i] )
+			cout&lt;&lt;(char)(i+'a');
+		}
+		cout&lt;&lt;endl;
+
+		cout&lt;&lt;"not in s1 and s2:";
+		for(int i=0;i&lt;26;i++){
+			if(!b1[i] &amp;&amp; !b2[i])
+			cout&lt;&lt;(char)(i+'a');
+		}
+		cout&lt;&lt;endl;
+	}
+}</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFHf+0YTNmgKYEhW9N/ckCgEoZJx8AhQSlBaw9GR7xhebMrAy91u7kDadhQ==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 37 繁忙的通讯兵</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">A、B两地相距200公里。在一次军事行动中，A、B两支军队同时出发，面对面直线运动。A军每小时行军8公里，B军每小时行军5公里。有一个通讯兵要为这两军传递信息，他与A军同时、同方向出发，行驶速度为每小时45公里。当他碰到B军时，算是完成了一次通讯；此时他立即调头驶向A军；碰到A军后，也算完成了一次通讯；此时他又立即调头驶向B军。如此来来回回，每当完成了一次通讯时，他会看一下A、B两军之间的距离，如果该距离小于距离N，他就停止行动。问该通讯兵从出发，到停止行动，共完成了几次通讯？ </Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据占一行，输入为最后A，B两地的最小距离数N，单位为公里，N为实数，0＜N＜200，在行首和行尾没有多余的空格。输入0时结束。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出从标准输入设备中读入的每一组测试数据对应的结果，所有数据前后没有多余的空行，两组数据之间也没有多余的空行。每组输出数据由一行组成，每行由一个数组成，在行首和行尾没有多余的空格。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="zero">
+                    <Terminator xml:space="preserve">0
+</Terminator>
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">0.1
+</TestInput>
+                    <TestOutput xml:space="preserve">27
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">199
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">100
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">20
+</TestInput>
+                    <TestOutput xml:space="preserve">8
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">19
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">0.01
+</TestInput>
+                    <TestOutput xml:space="preserve">35
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">0.001
+</TestInput>
+                    <TestOutput xml:space="preserve">42
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">200
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">101
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">102
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="065">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int n;
+	double s, v, t, m;
+	while(cin&gt;&gt;m &amp;&amp; m)
+	{
+		n = 0;
+		s = 200;
+		v = 8;
+		do
+		{
+			t = s/(45.0+v);
+			s = s - (8.0+5.0)*t;
+			n++;
+			v = 13 - v;
+		}while(s &gt;= m);
+		cout&lt;&lt;n&lt;&lt;endl;
+	}
+	return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 38 怪数</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">寻找怪数：有一种奇怪的自然数，它的比其本身小的所有因子之和等于它本身，例如：6＝1＋2＋3，其中1、2、3都是6的因子，编程找出整数N之内的所有怪数。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据占一行，每行输入一个整数N(0&amp;lt;N≤10000)，在行首和行尾没有多余的空格。输入以0结束。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出从标准输入设备中读入的每一组测试数据对应的结果，输出N之内的所有怪数，每一行输出一个整数。（注：若N中有3个怪数，你则需要输出三行，每行一个怪数。）所有数据前后没有多余的空格，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>2</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="zero">
+                    <Terminator xml:space="preserve">0</Terminator>
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">10000
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+496
+8128
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">10
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">100
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1000
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+496
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">500
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+496
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">101
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">102
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1000
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+496
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2000
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+496
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5000
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+28
+496
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="066">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int i,j,n,s;
+	while(cin&gt;&gt;n &amp;&amp; n)
+	{
+		for (i = 2; i &lt;=n; i++)
+		{
+			s = 1;
+			for (j = 2; j &lt;= i/2; j++)
+				if (i%j == 0)
+				s+=j;
+			if (s == i)
+			cout&lt;&lt;i&lt;&lt;endl;
+		} 
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 39 倒序</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="plain">
+                <Description xml:space="preserve">编写程序，把一串字符以倒序的方式输出。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。第一行输入字符串的个数n。之后就有n组输入数据，每组输入为一行字符串，该串由ASCII字符的任意组合构成，它们之间可能有一个或多个空格，在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出从标准输入设备中读入的每一组测试数据对应的结果，使其成为输入串的倒序。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="num">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">abcd-ef
+</TestInput>
+                    <TestOutput xml:space="preserve">fe-dcba
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">abc9$9c   ba
+</TestInput>
+                    <TestOutput xml:space="preserve">ab   c9$9cba
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">I love ACM!
+</TestInput>
+                    <TestOutput xml:space="preserve">!MCA evol I
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">abbcccddddeeeeeffffff
+</TestInput>
+                    <TestOutput xml:space="preserve">ffffffeeeeeddddcccbba
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1357924680
+</TestInput>
+                    <TestOutput xml:space="preserve">0864297531
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="067">#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+
+using namespace std;
+
+int main()
+{
+	int n , i , j , len;
+	char s[100];
+       cin&gt;&gt;n;
+	cin.get();
+	for (i = 0; i &lt; n; i++)
+	{
+		cin.getline(s,100);
+		len = strlen(s);
+		for (j = len-1; j &gt;= 0; j--)
+		cout&lt;&lt;s[j];
+		cout&lt;&lt;endl;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 40 一个复杂的公式</Title>
+            <Author>孙辞海</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">编写一个程序求出
+d = k! / (r!(k-r)!)
+的值。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据占一行，每行的输入包括两个整数r、k，其中0 &amp;lt; r,k ≤ 10，它们以空格分隔，在行首和行尾没有多余的空格。当r与k同时为0时输入结束。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的文本终端，例如你在Windows中启动该程序所用的命令行终端）依次输出从标准输入设备中读入的每一组测试数据对应的结果，所有数据前后没有多余的空行，两组数据之间也没有多余的空行。每组输出数据由一行组成，每行由一个数组成，在行首和行尾没有多余的空格。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="zero">
+                    <Terminator xml:space="preserve">0 0</Terminator>
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2 3
+</TestInput>
+                    <TestOutput xml:space="preserve">3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3 4
+</TestInput>
+                    <TestOutput xml:space="preserve">4
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">3 5
+</TestInput>
+                    <TestOutput xml:space="preserve">10
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5 7
+</TestInput>
+                    <TestOutput xml:space="preserve">21
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">4 8
+</TestInput>
+                    <TestOutput xml:space="preserve">70
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5 6
+</TestInput>
+                    <TestOutput xml:space="preserve">6
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7 8
+</TestInput>
+                    <TestOutput xml:space="preserve">8
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">10 10
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3 6
+</TestInput>
+                    <TestOutput xml:space="preserve">20
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="068">#include&lt;iostream&gt;
+using namespace std;
+
+int jiecheng(int n)
+{
+	int i;
+	if(n == 0)
+		i=1;
+	else
+		if(n == 1)
+			i =1;
+		else{
+			i=2;
+			for(int j = 3;j &lt;= n;j++)
+			{
+				i*=j;
+			}
+		}
+	return i;
+}
+int main()
+{
+	int d, r, k;
+	cin &gt;&gt; r &gt;&gt; k;
+	while(r!=0||k!=0){
+		d=jiecheng(k)/(jiecheng(r)*jiecheng(k-r));
+		cout &lt;&lt; d &lt;&lt; endl;
+		cin &gt;&gt; r &gt;&gt; k;
+	}
+	return 0;
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

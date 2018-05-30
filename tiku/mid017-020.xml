@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFCUklJaDrrcZc9khWkLDzkJRObLrAhQIdQGht2b+Po49mEt3y3HLTd0gvQ==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 17 最大效益</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明的爸爸开了一家小公司，公司里有5名职员。今天，公司接待了5位客户。明明的爸爸知道，和任何一位客户谈判并签下合同都要花一整天的时间，而他又希望在一天之内，和这5位客户都签好合同。因此，明明的爸爸要求公司里的5名职员分别与1位客户谈判。&lt;BR&gt;&lt;BR&gt;
+
+    明明的爸爸也知道，这5名职员和5位客户的性格各不相同。因此，不同的职员与不同的客户谈判，会给公司带来不同的经济效益。他现在要做出一个决策，让5名职员分别与哪位客户谈判，才能让公司今天的总经济效益最大。&lt;BR&gt;&lt;BR&gt;
+
+    明明的爸爸首先做了一张5行5列的效益表，如下所示：&lt;BR&gt;&lt;BR&gt;
+
+    1 1 1 1 1&lt;BR&gt;
+    1 1 1 1 1&lt;BR&gt;
+    1 1 1 1 1&lt;BR&gt;
+    1 1 1 1 1&lt;BR&gt;
+    1 1 1 1 1&lt;BR&gt;
+&lt;BR&gt;
+    在这张效益表中，每行代表一名公司职员，每列代表一个客户，每行中的5个数字就表示了当该行所代表的公司职员和每位客户谈判时所能产生的效益。明明的爸爸就要通过这张效益表来决定哪位职员与哪位顾客谈判，然后能够使公司的效益最大。就拿上面这张表来看，由于无论哪位职员与哪位客户谈判，所产生的效益都是1，因此最大的效益就是5。这是最简单的一种情况，但是当效益表里的数字变得复杂，就很难进行选择，到底哪种组合方式才是最优的。因此明明的爸爸求助于你，帮助他解决这个问题。&lt;BR&gt;&lt;BR&gt;
+
+    明明的爸爸的问题可以归结为：给你一张5行5列的效益表，表中的数字均为大于等于0的整数，要求在这张表中选出5个数字，使这5个数字的和最大。（注：这5个数字分别来自表中的不同行不同列，即同一行只能选择一个数字，同一列也只能选择一个数字。） 
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据。每组测试数据占5行；每行包含5个正整数；第i行的第j个正整数A&lt;SUB&gt;ij&lt;/SUB&gt;代表第i名职员与第j位客户谈判能为公司带来的经济效益（0≤A&lt;SUB&gt;ij&lt;/SUB&gt;≤100, 1≤i,j≤5）。每组测试数据与其后一组测试数据之间没有任何空行；第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将每组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果为一个整数s，即这一天中公司的最大可能总经济效益。例如：当测试数据中的所有Aij（1≤i,j≤5）均为1时，运算结果s应为5。输出时，每组运算结果s单独占一行，其行首和行尾都没有任何空格或其他任何字符；每组运算结果与其后一组运算结果之间没有任何空行或其他任何字符，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行或其他任何字符。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">5
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4 5
+</TestInput>
+                    <TestOutput xml:space="preserve">15
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">34 7 86 57 9
+23 4 56 8 9
+1 76 3 21 75
+10 78 6 9 75
+1 3 5 7 88
+</TestInput>
+                    <TestOutput xml:space="preserve">296
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">12 32 43 56 76
+13 13 41 5 7
+13 3 67 89 43
+13 35 4 2 1
+13 35 21 4 8
+</TestInput>
+                    <TestOutput xml:space="preserve">254
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">98 97 96 95 94
+1 2 3 4 5
+11 22 33 44 55
+66 77 88 99 1
+13 32 64 7 86
+</TestInput>
+                    <TestOutput xml:space="preserve">318
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="017">#include &lt;iostream&gt;//
+#include &lt;algorithm&gt;//
+
+using namespace std;//
+
+bool input(int* p) {//
+    bool hasNext = false; //
+    if (cin &gt;&gt; p[0]) {//
+        hasNext = true; //
+        for (int i = 1; i &lt; 5; i++) {//
+            cin &gt;&gt; p[i];//
+        }
+    }
+    return hasNext; //
+}
+
+int main() {//
+    int benifit[5][5];//
+    while (input(benifit[0])) {//
+        for (int i = 1; i &lt; 5; i++) {//
+            input(benifit[i]);//
+        }
+        int perm[5] = {0, 1, 2, 3, 4};//
+        int max = 0; //
+        do {//
+            int ben = 0; //
+            for (int i = 0; i &lt; 5; i++) {//
+                ben += benifit[perm[i]][i];//
+            }
+            if (ben &gt; max) {//
+                max = ben; //
+            }
+        } while (next_permutation(perm, perm + 5));//
+        cout &lt;&lt; max &lt;&lt; endl; //
+    }
+    return 0; //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 18 累加式</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">累加式对于明明来说是一个全新的概念，他在数学课上第一次听到了这个名词。可是明明在课堂上并没有完全明白，于是回家后明明就问他爸爸什么是累加式。明明的爸爸是一位数学家，自然对累加式非常熟悉，告诉明明：“累加式是一种表达式，这种表达式的构成方法是这样的：从1开始加，其后的每一个数都比前一个数大1，然后加到某一个数后停止递增，之后每加的一个数都比前一个数小1，一直加到1为止，这样构成的一个表达式称为累加式。&lt;BR&gt;&lt;BR&gt;
+
+例如1+2+3+4+3+2+1就是一个累加式，它从1开始加到4，然后再加到1，完成累加的过程。”明明对他爸爸的回答相当满意，于是想构造更多的累加式出来，可是明明又不想过于辛苦，他来求助于你，帮他写一个程序，完成累加式的构造。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你一个正整数n，完成从1到n再到1的累加式的构造。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据仅占一行，每行仅包含一个正整数n（1≤n≤10）。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果由一个1到n再到1的累加式构成，累加式中不包含空格；每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+
+注：通常，显示屏为标准输出设备。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+4+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+4+5+4+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+4+5+6+5+4+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">7
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+4+5+6+7+6+5+4+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">8
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+4+5+6+7+8+7+6+5+4+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">9
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+3+4+5+6+7+8+9+8+7+6+5+4+3+2+1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">1+2+1
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="018">#include &lt;iostream&gt;//
+
+using namespace std;//
+
+int main() {//
+    int level;
+    while (cin &gt;&gt; level) {//
+               
+        for (int i = 1; i &lt; level; i++) {//
+            cout &lt;&lt; i &lt;&lt; '+';//
+        }
+        cout &lt;&lt; level;//
+        for (int i = level - 1; i &gt;= 1; i--) {//
+            cout &lt;&lt; '+' &lt;&lt; i;//
+        }
+        cout&lt;&lt;endl;
+    }
+    return 0; //
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 19 三艘船</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明由于工作的关系，经常需要坐船到某地出差办事。久而久之，明明就对这两地之间船的班次情况相当了解，他会根据办事的具体情况选择不同班次的船出行。这两地的船一共分为三个班次：特快船、快船、慢船，三个班次的船在同一天的0点从港口出发，并沿着同一路线匀速航行，只是它们到达目的地的时刻不同。&lt;BR&gt;&lt;BR&gt;
+
+你作为明明的好朋友，有一次和明明在闲聊，问到他出差时船的航行距离有多少时，明明没有正面回答你这个问题，而只是把三艘船（特快、快、慢）的速度，以及它们到达目的地的时间是几点钟（并不知道分别是哪一天，只知道三艘船都在100天以内到达了终点）告诉了你，要你推算出两地间的距离长度。你作为一位程序设计专家，自然不会被明明的这个问题所难倒，于是你决定写一个程序，来求解这个看似困难其实简单的问题。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给出三艘船的速度，以及它们到达目的地时是几点钟（并不知道分别是哪一天，只知道三艘船都在100天以内到达了终点），求两地间的距离到底有多少。若有多组解，只输出最小的那组解。
+</Description>
+                <InputSpec xml:space="preserve">你写的程序要求从标准输入设备中读入测试数据作为你所写程序的输入数据。标准输入设备中有多组测试数据，每组测试数据占二行，第一行有3个正整数a、b、c，代表3艘船的到达港口那天的时间是几点钟（0≤a、b、c≤23）。第二行有3个正整数d、e、f代表3艘船的速度（0&amp;lt;d、e、f&amp;lt;30000），速度的单位是单位距离每小时。每组测试数据与其后一组测试数据之间没有任何空行，第一组测试数据前面以及最后一组测试数据后面也都没有任何空行。</InputSpec>
+                <OutputSpec xml:space="preserve">对于每一组测试数据，你写的程序要求计算出一组相应的运算结果，并将这一组运算结果作为你所写程序的输出数据依次写入到标准输出设备中。每组运算结果由一个整数构成，代表路程的长度，若有多组解，只输出最小的那组解。每组运算结果与其后一组运算结果之间没有任何空行，第一组运算结果前面以及最后一组运算结果后面也都没有任何空行。&lt;BR&gt;&lt;BR&gt;
+注：通常，显示屏为标准输出设备。 
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4 2 20
+5 10 13
+</TestInput>
+                    <TestOutput xml:space="preserve">260
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">18 12 21
+6 9 12
+</TestInput>
+                    <TestOutput xml:space="preserve">540
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">0 0 0
+1 1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">0 6 16
+6 8 9
+</TestInput>
+                    <TestOutput xml:space="preserve">1008
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">13 23 19
+5 7 35
+</TestInput>
+                    <TestOutput xml:space="preserve">665
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">21 17 15
+5 9 15
+</TestInput>
+                    <TestOutput xml:space="preserve">585
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">18 4 21
+6 9 12
+</TestInput>
+                    <TestOutput xml:space="preserve">252
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">20 0 15
+6 7 8
+</TestInput>
+                    <TestOutput xml:space="preserve">1848
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">15 21 13
+5 7 15
+</TestInput>
+                    <TestOutput xml:space="preserve">1995
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">17 6 3
+6 17 34
+</TestInput>
+                    <TestOutput xml:space="preserve">102
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="019">#include &lt;iostream&gt;
+
+using namespace std;
+
+const int MAX_DAY = 100;
+
+int main() {
+    int speed[3];
+    int hour[3];
+    int dis[3];
+    while (cin &gt;&gt; hour[0] &gt;&gt; hour[1] &gt;&gt; hour[2]) {
+        cin &gt;&gt; speed[0] &gt;&gt; speed[1] &gt;&gt; speed[2];
+        bool found = false;
+        for (int i = 0; i &lt; MAX_DAY &amp;&amp; !found; i++) {
+            for (int j = 0; j &lt; MAX_DAY &amp;&amp; !found; j++) {
+                for (int k = 0; k &lt; MAX_DAY &amp;&amp; !found; k++) {
+                    dis[0] = (i * 24 + hour[0]) * speed[0];
+                    dis[1] = (j * 24 + hour[1]) * speed[1];
+                    dis[2] = (k * 24 + hour[2]) * speed[2];
+                    if (dis[0] == dis[1]
+                        &amp;&amp; dis[1] == dis[2]
+                        &amp;&amp; dis[2] == dis[0]
+                       ) {
+                        found = true;
+                    }
+                }
+            }
+        }
+        cout &lt;&lt; dis[0] &lt;&lt; endl;
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 20 部落人乘法</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">明明热爱数学，他的爸爸也有意培养明明对数学的兴趣。一次，为了拓展明明的知识面，爸爸给明明讲了一个原始部落人计算乘法的方法：据说原始部落人以小石子作为计算工具，并用减半和加倍两种运算就能求得任何两个整数的乘积。其规则是：左边不断除2，写下商，舍去余数；右边不断加倍，直到左边变成1为止。取结果的方法是：如果某行左边是偶数，就划去整个这一行；如果某行左边是奇数，右边剩下的数相加即可。
+
+例如求13与15的乘积的过程是：&lt;BR&gt;&lt;BR&gt;
+
+计算过程：&lt;BR&gt;
+13--------15  ：13除以2等于6，舍去余数1，15乘以2等于30；&lt;BR&gt;
+6---------30  ：6除以2等于3，30乘以2等于60；&lt;BR&gt;
+3---------60  ：3除以2等于1，舍去余数1，60乘以2等于120；&lt;BR&gt;
+1---------120 ：左边数字为1，停止计算。&lt;BR&gt;
+&lt;BR&gt;
+取结果过程：&lt;BR&gt;
+13--------15  ：左边是奇数，取15；&lt;BR&gt;
+6---------30  ：左边是偶数，划去；&lt;BR&gt;
+3---------60  ：取60；&lt;BR&gt;
+1---------120 ：取120；&lt;BR&gt;
+&lt;BR&gt;
+其结果就是： 13*15=15+60+120=195。&lt;BR&gt;
+&lt;BR&gt;
+明明对爸爸讲的这个故事相当感兴趣，也自己动手开始模拟上面的过程计算起来。刚开始的时候，明明感觉这样计算很有趣，但是时间一长，明明就觉得这样的计算过程很麻烦。他想让你帮他写一个程序，快速的计算出上述乘法最后相加的式子和结果。&lt;BR&gt;&lt;BR&gt;
+
+明明的问题可以归结为：给你两个整数，使用上面描述的乘法过程，输出最后的相加的式子。
+</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组测试数据占一行，其中包含两个整数a和b（1 &amp;lt;= a, b &amp;lt;= 100）。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。格式参见样例。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>10</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">13 15
+</TestInput>
+                    <TestOutput xml:space="preserve">13*15=15+60+120=195
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2 4
+</TestInput>
+                    <TestOutput xml:space="preserve">2*4=8=8
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1 1
+</TestInput>
+                    <TestOutput xml:space="preserve">1*1=1=1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">100 100
+</TestInput>
+                    <TestOutput xml:space="preserve">100*100=400+3200+6400=10000
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">1 100
+</TestInput>
+                    <TestOutput xml:space="preserve">1*100=100=100
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">100 1
+</TestInput>
+                    <TestOutput xml:space="preserve">100*1=4+32+64=100
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">88 77
+</TestInput>
+                    <TestOutput xml:space="preserve">88*77=616+1232+4928=6776
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">23 45
+</TestInput>
+                    <TestOutput xml:space="preserve">23*45=45+90+180+720=1035
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">99 99
+</TestInput>
+                    <TestOutput xml:space="preserve">99*99=99+198+3168+6336=9801
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">37 21
+</TestInput>
+                    <TestOutput xml:space="preserve">37*21=21+84+672=777
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="020">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int a, b;
+    int add[10];
+    int cnt;
+    while (cin &gt;&gt; a &gt;&gt; b) {
+        cout &lt;&lt; a &lt;&lt; '*' &lt;&lt; b &lt;&lt; '=';
+        cnt = 0;
+        if (a % 2 != 0) {
+            add[cnt] = b;
+            cnt++;
+        }
+        while (a &gt; 1) {
+            a /= 2;
+            b *= 2;
+            if (a % 2 != 0) {
+                add[cnt] = b;
+                cnt++;
+            }
+        }
+        int mul = 0;
+        for (int i = 0; i &lt; cnt; i++) {
+            cout &lt;&lt; add[i];
+            mul += add[i];
+            if (i &lt; cnt - 1) {
+                cout &lt;&lt; '+';
+            }
+        }
+        cout &lt;&lt; '=' &lt;&lt; mul &lt;&lt; endl;
+    }
+    return 0;
+}
+</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

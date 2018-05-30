@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PaperSetter checked="true">
+    <PaperDetail xml:space="preserve"><PaperVersion>1</PaperVersion><PaperID>1</PaperID><PaperName>1</PaperName><PaperAuthor>1</PaperAuthor><PaperTotalTime unit="hour">3</PaperTotalTime><PaperStartTime zone="+8">1</PaperStartTime><PaperProblemSum>4</PaperProblemSum><PublicKey>MIHxMIGoBgcqhkjOOAQBMIGcAkEA/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0ImbzRMqzVDZkVG9xD7nN1kuFwIVAJYu3cw2nLqOuyYO5rahJtk0bjjFAkBnhHGyepz0TukaScUUfbGpqvJE8FpDTWSGkx0tFCcbnjUDC3H9c9oXkGmzLik1Yw4cIGI1TQ2iCmxBblC+eUykA0QAAkEA8ojKBedYrFoDBvrk2cvh998qmKFuHB0gXegkDXzHhk+yUprBGbpdLHVDWq8P7hPLyNPuviEvJoxz4x5kqiidgQ==</PublicKey><Signature>MCwCFBpWUlpIll4fA0/QC6N+QXtBBcl1AhR65ZOHiqPlDGPl1q8iIp6CERUOtw==</Signature><PaperReference><![CDATA[1]]></PaperReference><PaperDescribe><![CDATA[登陆及提交说明<BR>
+请不要擅自操作键盘和鼠标，根据现场工作的人员的指示操作。<BR>
+<BR>
+<BR>
+2)试题描述说明<BR>
+试题主要是描述了一个问题，并请你用程序来解决这个问题。一般来说，你所编写的程序应该能够接受题目中所描述的数据，按照题目的描述处理这些数据，并且严格按照输出描述(The Output)中所述的格式输出结果。程序将提交到服务器进行打分。打分详情可见‘3)打分说明’部分。<BR>
+试题主要分为六部分: <BR>
+1.标题<BR>
+包括试题的主标题，以及副标题Time Limit部分，Time Limit表示所提交的答题程序所能运行的最长时间，如果超过这个时间，程序无论输出是否正确，都将被裁判端判为Time Limit Exceed。<BR>
+比如Time Limit是10 sec(10秒)。如果提交的答题程序运行时间超过10秒，则会被判为Time Limit Exceed，无论答题程序输出是否正确，也就是说在10秒内答题程序输出的结果正确或错误都不会得到任何提示。<BR>
+<BR>
+2.Descripiton<BR>
+题目描述，作为题目的主要部分，对问题进行详细的说明。<BR>
+<BR>
+3.The Input<BR>
+输入描述部分，这部分描述了输入数据及其格式和范围。输入答题程序的数据将严格按照这部分的描述。<BR>
+<BR>
+4.The Output<BR>
+输出描述，这部分描述了答题程序所应该输出的数据及其格式。答题程序必须按照这部分的描述来输出，否则很有可能无法通过裁判端的测试。<BR>
+<BR>
+5.Sample Input<BR>
+输入样例，以实例来说明输入数据的格式。请注意这里的数据只是作为实例，并不代表实际测试答题程序的数据是这些。因此能正确处理Sample中的数据并不代表程序一定能通过。不过，Sample数据一定是实际测试数据的子集，因此不能正确处理Sample就一定无法在裁判端通过。所以没有通过Sample的程序最好不要贸然提交。
+<BR>
+6.Sample Output<BR>
+对应输入样例的输出数据，用来说明答题程序所应输出的格式。答题程序的输出应该严格按照这部分所示输出。比如：<BR>
+在Sample Output中有两个整数独占一行，并且以空格分隔，如下：<BR>
+2 3<BR>
+那么如下的输出都是错误的：<BR>
+a=2 b=3<BR>
+或<BR>
+2       3<BR>
+或<BR>
+3 2<BR>
+必须严格按照Sample Output中所示的格式输出才有可能通过裁判端打分。<BR>
+<BR>
+3)打分说明<BR>
+打分结果	评判标准<BR>
+Compile Error	编译错<BR>
+Time Limited Exceeded	程序运行超过时间限制<BR>
+Run Time Error	程序运行错误<BR>
+Wrong Answer	输出结果中关键数据错误<BR>
+Presentation Error	格式错<BR>
+Accepted	输出结果完全正确<BR>
+
+
+4)程序编写说明<BR>
+1.C/C++<BR>
+首先，必须注意程序的main函数需要定义成int型，然后必须return 0。<BR>
+其次，如果输入描述(The Output)中没有明确规定输入结束标志或说以EOF结束，那么可以使用如下格式来读入：<BR>
+<BR>
+while(cin>>a)或while(scanf("%d",&a)==1)<BR>
+<BR>
+注：这里while(scanf("%d",&a)==1)中的1是输入数据的数量，如果有两个则是：<BR>
+while(scanf("%d %d",&a,&b)==2)<BR>
+<BR>]]></PaperDescribe></PaperDetail>
+    <ProblemList encrypted="0">
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 45 表达式求值</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">以字符串形式输入仅有整数和加减号构成的表达式，输出该表达式的值。
+</Description>
+                <InputSpec xml:space="preserve">标准输入设备中有多组测试数据，每组输入数据由一行组成，输入仅有整数和加减号构成的表达式（但是表达式可以插入空格）。</InputSpec>
+                <OutputSpec xml:space="preserve">依次输出从标准输入设备中读入的每一组测试数据对应的结果，输出一行，输出该表达式的值。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">3+4- 5+ 6 - 80 + 10000
+</TestInput>
+                    <TestOutput xml:space="preserve">9928
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">3+    4+  5+6
+</TestInput>
+                    <TestOutput xml:space="preserve">18
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">  1 -1
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">  0+1
+</TestInput>
+                    <TestOutput xml:space="preserve">1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">100000
+</TestInput>
+                    <TestOutput xml:space="preserve">100000
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">200000
+</TestInput>
+                    <TestOutput xml:space="preserve">200000
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">-1-1-1
+</TestInput>
+                    <TestOutput xml:space="preserve">-3
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">23 + 7 - 10 - 20
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">-1
+</TestInput>
+                    <TestOutput xml:space="preserve">-1
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">-1-0+0-0+0
+</TestInput>
+                    <TestOutput xml:space="preserve">-1
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="dfs">#include&lt;cstring&gt;
+#include&lt;iostream&gt;
+
+using namespace std;
+
+char s[1000];
+long long res;
+void init()
+{
+	int i,j=0;
+	int  l =strlen(s);
+	for (i=0;i&lt;l;i++)
+	if (s[i]!=' ')
+	s[j++] = s[i];
+	s[j] = 0;
+	res = 0;
+}
+
+int main()
+{
+	while(cin.getline(s,1000))
+	{
+		init();	
+		int i=0,l=strlen(s);
+		int p,f;
+		while(i&lt;l)
+		{
+			if (s[i]=='-'){ f = -1; i++;}
+			else if (s[i]=='+') { i++; f = 1;}
+			else f = 1;
+			p = 0;
+			while(s[i]&gt;='0'&amp;&amp;s[i]&lt;='9'&amp;&amp;i&lt;l)
+			{
+				p = p*10 + s[i] - '0';
+				i++;
+			}
+			res = res + p*f;
+		}
+		cout&lt;&lt;res&lt;&lt;endl;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 46 发牌</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">编制一个模拟发牌的程序。有编号为1，2，3，4四个人，将一付去掉大小怪的扑克按照如下顺序排列梅花c0-c12，方块d0-d12，红桃h0--h12，黑桃s0-s12，然后按照1，2，3，4四个人的顺序发牌，问最后每个人手上的牌有哪些。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成。每组数据包含一个在1到4之间的整数，代表四个人中的一个，在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。对于每组输入，输出那个人手上的牌。每组一行。每行包括13张牌，每张牌由牌的花色和牌的大小组成，他们之前有一个空格。其余数据前后没有多余的空格，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>2</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">c 0 c 4 c 8 c 12 d 3 d 7 d 11 h 2 h 6 h 10 s 1 s 5 s 9
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">c 1 c 5 c 9 d 0 d 4 d 8 d 12 h 3 h 7 h 11 s 2 s 6 s 10
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">3
+</TestInput>
+                    <TestOutput xml:space="preserve">c 2 c 6 c 10 d 1 d 5 d 9 h 0 h 4 h 8 h 12 s 3 s 7 s 11
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">c 3 c 7 c 11 d 2 d 6 d 10 h 1 h 5 h 9 s 0 s 4 s 8 s 12
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">c 0 c 4 c 8 c 12 d 3 d 7 d 11 h 2 h 6 h 10 s 1 s 5 s 9
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="56">#include&lt;iostream&gt;
+using namespace std;
+int a[4][13][2];
+int l[4]={0};
+void init()
+{
+	int i,j;
+	int player=0;
+	for(i=0;i&lt;4;i++)
+		for(j=0;j&lt;13;j++)
+		{
+			a[player][l[player]][0]=i;
+			a[player][l[player]][1]=j;
+			l[player]++;
+			player++;
+			if(player==4)
+				player=0;
+		}
+}
+int main()
+{
+	init();
+	int n;
+	char tab[5]="cdhs";
+	int i;
+	while(cin&gt;&gt;n)
+	{
+		n--;
+		for(i=0;i&lt;13;i++)
+		{
+			if(i!=0)
+				cout&lt;&lt;' ';
+			cout&lt;&lt;tab[a[n][i][0]]&lt;&lt;' '&lt;&lt;a[n][i][1];
+			
+		}
+		cout&lt;&lt;endl;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 47 输出*</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">打印指定数目的 *，0&amp;lt;n&amp;lt;10。</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成。每行输入一个n代表一行需要打印多少*，在行首和行尾没有多余的空格。</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案。输出一行*，每行*的个数由输入的n决定。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">4
+</TestInput>
+                    <TestOutput xml:space="preserve">****
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">5
+</TestInput>
+                    <TestOutput xml:space="preserve">*****
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">1
+</TestInput>
+                    <TestOutput xml:space="preserve">*
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">2
+</TestInput>
+                    <TestOutput xml:space="preserve">**
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">6
+</TestInput>
+                    <TestOutput xml:space="preserve">******
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="51">#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+	int n;
+	while(cin&gt;&gt;n)
+	{
+		int i;
+		for(i=0;i&lt;n;i++)
+			cout&lt;&lt;'*';
+		cout&lt;&lt;endl;
+	}
+	return 0;
+}
+	</Solution>
+        </ProblemArchive>
+        <ProblemArchive version="1.0" checked="true">
+            <Title>Problem 48 进制转换</Title>
+            <Author>朱星垠</Author>
+            <Problem contentType="html">
+                <Description xml:space="preserve">输入一个十进制数，将其化成N进制数输出（2≤N≤16)。&lt;p&gt;
+在大于等于10进制的进制中，A代表10，B代表11以此类推。
+
+</Description>
+                <InputSpec xml:space="preserve">你的程序需要从标准输入设备（通常为键盘）中读入多组测试数据。每组输入数据由一行组成，每行有2个数，分别代表十进制数和进制N，它们以空格分隔，在行首和行尾没有多余的空格。
+</InputSpec>
+                <OutputSpec xml:space="preserve">对每组测试数据，你的程序需要向标准输出设备（通常为启动该程序的终端）依次输出一组对应的答案：输出10进制数转换后的N进制数。所有数据前后没有多余的空格，两组数据之间也没有多余的空行。
+</OutputSpec>
+            </Problem>
+            <TestData>
+                <TimeLimit>1</TimeLimit>
+                <InputFile />
+                <OutputFile />
+                <InputFormat inputType="eof">
+                    <Terminator xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </InputFormat>
+                <OutputFormat>
+                    <Header xml:space="preserve" />
+                    <Footer xml:space="preserve" />
+                    <Seperator xml:space="preserve" layout="bottom" />
+                </OutputFormat>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">100 10
+</TestInput>
+                    <TestOutput xml:space="preserve">100
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="sample">
+                    <TestInput xml:space="preserve">64 2
+</TestInput>
+                    <TestOutput xml:space="preserve">1000000
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">0 3
+</TestInput>
+                    <TestOutput xml:space="preserve">0
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">100 16
+</TestInput>
+                    <TestOutput xml:space="preserve">64
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">200 14
+</TestInput>
+                    <TestOutput xml:space="preserve">104
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="special">
+                    <TestInput xml:space="preserve">255 16
+</TestInput>
+                    <TestOutput xml:space="preserve">FF
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">256 16
+</TestInput>
+                    <TestOutput xml:space="preserve">100
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">24 5
+</TestInput>
+                    <TestOutput xml:space="preserve">44
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">35 6
+</TestInput>
+                    <TestOutput xml:space="preserve">55
+</TestOutput>
+                </TestCase>
+                <TestCase difficulty="trivial">
+                    <TestInput xml:space="preserve">48 7
+</TestInput>
+                    <TestOutput xml:space="preserve">66
+</TestOutput>
+                </TestCase>
+            </TestData>
+            <Solution xml:space="preserve" language="cpp" filename="ty">#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+
+using namespace std;
+
+char s[20] = "0123456789ABCDEF";
+int a[100];
+long long n,m;
+
+int main()
+{
+	while(cin&gt;&gt;m&gt;&gt;n)
+	{
+		int i=0;
+		if  (m==0) {cout&lt;&lt;0&lt;&lt;endl;continue;}	
+		while(m&gt;0)
+		{
+			a[i++] =m%n;
+			m = m/n; 
+		}	
+		for (int j = i-1;j&gt;=0;j--)
+		cout&lt;&lt;s[a[j]];
+		cout&lt;&lt;endl;
+	}
+	return 0;
+}</Solution>
+        </ProblemArchive>
+    </ProblemList>
+</PaperSetter>
+

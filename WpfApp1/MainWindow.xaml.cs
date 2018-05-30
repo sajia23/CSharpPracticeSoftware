@@ -56,6 +56,7 @@ namespace WpfApp1
             Console.WriteLine("MainWindow");
             cscPath = FindCsc();
             InitialXmlSolved();
+            treeview.ItemsSource = ss;
             LoadTikuList();//加载题库列表
             if(ss.Count == 1)
             {
@@ -107,91 +108,105 @@ namespace WpfApp1
         /// </summary>
         private void SolvedClass2Xml()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Solvespace>));
-            TextWriter writer = new StreamWriter("C:\\Users\\yuesh\\Desktop\\123.xml");
-            serializer.Serialize(writer, ss);
-            writer.Close();
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Solvespace>));
+                TextWriter writer = new StreamWriter("resources\\123.xml");
+                serializer.Serialize(writer, ss);
+                writer.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
         /// <summary>
         /// 将xml文件中的解决方案加载到泛型中
         /// </summary>
         private void InitialXmlSolved()
-        {           
-            XDocument doc = XDocument.Load("resources\\123.xml");
-            //读取xml文件中所有的Solvespace节点
-            IEnumerable<XElement> xmlss = from solvespce in doc.Descendants("Solvespace") select solvespce;
-            Console.WriteLine("xmlss的数量为" + xmlss.Count() + "个"); 
-            foreach(XElement e in xmlss)
+        {
+            try
             {
-                Solvespace solvespace = new Solvespace();
-                //读取Solvespace节点的属性
-                solvespace.Path = (String)e.Attribute("Path");
-                solvespace.Name = (String)e.Attribute("Name");
-                Console.WriteLine("solvespace的Name" + (String)e.Attribute("Name"));
-                solvespace.Path = (String)e.Attribute("Path");
-                Console.WriteLine("solvespace的Path" + (String)e.Attribute("Path"));
-                //读取xml文件中所有的Problem节点
-                IEnumerable<XElement> xmlproblem = from problem in e.Descendants("Problem") select problem;
-                ObservableCollection<Solvedproblem> solvedproblems = new ObservableCollection<Solvedproblem>();
-                foreach (XElement eproblem in xmlproblem)
+                XDocument doc = XDocument.Load("resources\\123.xml");
+                //读取xml文件中所有的Solvespace节点
+                IEnumerable<XElement> xmlss = from solvespce in doc.Descendants("Solvespace") select solvespce;
+                Console.WriteLine("xmlss的数量为" + xmlss.Count() + "个");
+                foreach (XElement e in xmlss)
                 {
-                    Solvedproblem sp = new Solvedproblem();
-                    sp.Name = (String)eproblem.Attribute("Name");
-                    sp.Path = (String)eproblem.Attribute("Path");
-                    sp.Tiku = (String)eproblem.Attribute("Tiku");
-                    sp.Parent = solvespace;
-                    ObservableCollection<Solution> solutions = new ObservableCollection<Solution>();
-                    IEnumerable<XElement> xmlsolution = from esolution in eproblem.Descendants("Solvelution") select esolution;
-                    foreach(XElement esolution in xmlsolution)
+                    Solvespace solvespace = new Solvespace();
+                    //读取Solvespace节点的属性
+                    solvespace.Path = (String)e.Attribute("Path");
+                    solvespace.Name = (String)e.Attribute("Name");
+                    Console.WriteLine("solvespace的Name" + (String)e.Attribute("Name"));
+                    solvespace.Path = (String)e.Attribute("Path");
+                    Console.WriteLine("solvespace的Path" + (String)e.Attribute("Path"));
+                    //读取xml文件中所有的Problem节点
+                    IEnumerable<XElement> xmlproblem = from problem in e.Descendants("Problem") select problem;
+                    ObservableCollection<Solvedproblem> solvedproblems = new ObservableCollection<Solvedproblem>();
+                    foreach (XElement eproblem in xmlproblem)
                     {
-                        Solution solution = new Solution();
-                        solution.Parent = sp;
-                        solution.Name = (String)esolution.Attribute("Name");
-                        solution.Path = (String)esolution.Attribute("Path");
-                        IEnumerable<XElement> xmlclassfile = from classfile in esolution.Descendants("Classfile") select classfile;
-                        ObservableCollection<Classfile> classfiles = new ObservableCollection<Classfile>();
-                        foreach (XElement eclassfile in xmlclassfile)
+                        Solvedproblem sp = new Solvedproblem();
+                        sp.Name = (String)eproblem.Attribute("Name");
+                        sp.Path = (String)eproblem.Attribute("Path");
+                        sp.Tiku = (String)eproblem.Attribute("Tiku");
+                        sp.Parent = solvespace;
+                        ObservableCollection<Solution> solutions = new ObservableCollection<Solution>();
+                        IEnumerable<XElement> xmlsolution = from esolution in eproblem.Descendants("Solvelution") select esolution;
+                        foreach (XElement esolution in xmlsolution)
                         {
-                            Classfile cf = new Classfile();
-                            cf.Parent = solution;
-                            cf.Name = (String)eclassfile.Attribute("Name");
-                            cf.Path = (String)eclassfile.Attribute("Path");
-                            IEnumerable<XElement> xmlreference = from reference in eclassfile.Descendants("Reference") select reference;
-                            ObservableCollection<Reference> references = new ObservableCollection<Reference>();
-                            foreach (XElement ereference in xmlreference)
+                            Solution solution = new Solution();
+                            solution.Parent = sp;
+                            solution.Name = (String)esolution.Attribute("Name");
+                            solution.Path = (String)esolution.Attribute("Path");
+                            IEnumerable<XElement> xmlclassfile = from classfile in esolution.Descendants("Classfile") select classfile;
+                            ObservableCollection<Classfile> classfiles = new ObservableCollection<Classfile>();
+                            foreach (XElement eclassfile in xmlclassfile)
                             {
-                                Reference rf = new Reference();
-                                rf.Parent = cf;
-                                rf.Name = (String)ereference.Attribute("Name");
-                                IEnumerable<XElement> xmlref = from refs in ereference.Descendants("Ref") select refs;
-                                ObservableCollection<Ref> referencess = new ObservableCollection<Ref>();
-                                foreach (XElement eref in xmlref)
+                                Classfile cf = new Classfile();
+                                cf.Parent = solution;
+                                cf.Name = (String)eclassfile.Attribute("Name");
+                                cf.Path = (String)eclassfile.Attribute("Path");
+                                IEnumerable<XElement> xmlreference = from reference in eclassfile.Descendants("Reference") select reference;
+                                ObservableCollection<Reference> references = new ObservableCollection<Reference>();
+                                foreach (XElement ereference in xmlreference)
                                 {
-                                    Ref refs = new Ref();
-                                    refs.Parent = rf;
-                                    refs.Name = (String)eref.Attribute("Name");
-                                    refs.Path = (String)eref.Attribute("Path");
-                                    referencess.Add(refs);
+                                    Reference rf = new Reference();
+                                    rf.Parent = cf;
+                                    rf.Name = (String)ereference.Attribute("Name");
+                                    IEnumerable<XElement> xmlref = from refs in ereference.Descendants("Ref") select refs;
+                                    ObservableCollection<Ref> referencess = new ObservableCollection<Ref>();
+                                    foreach (XElement eref in xmlref)
+                                    {
+                                        Ref refs = new Ref();
+                                        refs.Parent = rf;
+                                        refs.Name = (String)eref.Attribute("Name");
+                                        refs.Path = (String)eref.Attribute("Path");
+                                        referencess.Add(refs);
+                                    }
+                                    rf.References = referencess;
+                                    Console.WriteLine("收集了" + xmlref.Count() + "个ref");
+                                    references.Add(rf);
                                 }
-                                rf.References = referencess;
-                                Console.WriteLine("收集了" + xmlref.Count()+"个ref");
-                                references.Add(rf);
-                            }
-                            Console.WriteLine("收集了" + xmlreference.Count() + "个reference");
-                            cf.Reference = references;
-                            classfiles.Add(cf);
+                                Console.WriteLine("收集了" + xmlreference.Count() + "个reference");
+                                cf.Reference = references;
+                                classfiles.Add(cf);
 
+                            }
+                            solution.Classfile = classfiles;
+                            solutions.Add(solution);
                         }
-                        solution.Classfile = classfiles;
-                        solutions.Add(solution);                 
+                        sp.Solution = solutions;
+                        solvedproblems.Add(sp);
                     }
-                    sp.Solution = solutions;
-                    solvedproblems.Add(sp);
+                    solvespace.Solvedproblem = solvedproblems;
+                    ss.Add(solvespace);
                 }
-                solvespace.Solvedproblem = solvedproblems;
-                ss.Add(solvespace);
+                
             }
-            treeview.ItemsSource = ss;
+            catch
+            {
+
+            }
         }
 
         private void InitialXmlProblem(string file)

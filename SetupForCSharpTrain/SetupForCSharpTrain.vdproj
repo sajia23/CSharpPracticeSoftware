@@ -22,7 +22,7 @@
         "Entry"
         {
         "MsmKey" = "8:_09E130460754CF485D17CFC7F85777B0"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,7 +52,7 @@
         "Entry"
         {
         "MsmKey" = "8:_1C9AFC2A28A2E07E867847BD8D9230C6"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_39E3D50C8066C327C3BE0D8BFE90F5F0"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,7 +118,7 @@
         "Entry"
         {
         "MsmKey" = "8:_447BB2C841E75B29535C47F5C4D962C1"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -130,7 +130,7 @@
         "Entry"
         {
         "MsmKey" = "8:_55B1D7C6B71B6DD9DDBAECDAC0CF2C75"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -142,7 +142,7 @@
         "Entry"
         {
         "MsmKey" = "8:_56831ECBEBF9B148680F9969AD0B76C8"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -202,7 +202,7 @@
         "Entry"
         {
         "MsmKey" = "8:_78BE19713C470D87926457A46487DF77"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -226,7 +226,7 @@
         "Entry"
         {
         "MsmKey" = "8:_8A8EE9E1E90A0B5A3095BFC432680374"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -255,12 +255,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B2AD3E8DB877474F9B6A83F52B3A6F95"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -268,6 +262,12 @@
         "Entry"
         {
         "MsmKey" = "8:_BAA5E808F9054499B4B35EC6355DFE32"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -286,7 +286,7 @@
         "Entry"
         {
         "MsmKey" = "8:_CCDE1CD71C6A385AA201BCACFD58E9B8"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -328,7 +328,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D96B7B86E0252C047A7C605963890796"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -352,7 +352,7 @@
         "Entry"
         {
         "MsmKey" = "8:_ED8BA73EB457103DAE1192E4A66B750F"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -400,7 +400,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
+        "OwnerKey" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1798,20 +1798,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_176EA05D67FB4F4A9E4E89F55EF33DE8"
-            {
-            "Name" = "8:C#编程练习"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_AE353FA63FA8481487CB0760C1D85C5E"
-            "Folder" = "8:_21AF4553328A4BF394AF2C62CFDA0801"
-            "WorkingFolder" = "8:_D7F54DE0D7854273AD07951F72F520EE"
-            "Icon" = "8:_E4DAE483CA0240A69CB062CAF477CEA5"
-            "Feature" = "8:"
-            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_58E0B29C9EEB4EC4ABE4C5500E219355"
             {
             "Name" = "8:卸载C#编程练习"
@@ -1824,6 +1810,20 @@
             "Folder" = "8:_F49072AA9B4840028FDAC28F5F3CB400"
             "WorkingFolder" = "8:_D7F54DE0D7854273AD07951F72F520EE"
             "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DC0D48CC1ED14C86B5E0CCF0315387CF"
+            {
+            "Name" = "8:C#编程练习"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
+            "Folder" = "8:_21AF4553328A4BF394AF2C62CFDA0801"
+            "WorkingFolder" = "8:_D7F54DE0D7854273AD07951F72F520EE"
+            "Icon" = "8:_E4DAE483CA0240A69CB062CAF477CEA5"
             "Feature" = "8:"
             }
         }
@@ -2225,7 +2225,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_AE353FA63FA8481487CB0760C1D85C5E"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_BDE9FEFDDFCA414BA0D1B7B8C7556B70"
             {
             "SourcePath" = "8:..\\WpfApp1\\obj\\Debug\\WpfApp1.exe"
             "TargetName" = "8:"

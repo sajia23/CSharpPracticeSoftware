@@ -113,8 +113,8 @@ namespace WpfApp1
                     break;
                 }
             }
-            solve1.IsEnabled = false;
-            solve2.IsEnabled = false;
+            solve1.IsEnabled = true;
+            solve2.IsEnabled = true;
         }
         /// <summary>
         /// 通过类文件加载测试用例
